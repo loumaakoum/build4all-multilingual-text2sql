@@ -1,0 +1,654 @@
+sql,latency_seconds,sql_safe,sql_executed,execution_correct,execution_error,extra,question_id,intent_id,template_family,language,split,question,gold_sql,experiment
+SELECT AVG(tax_amount) FROM build4all_research.orders WHERE status = 'cancelled';,3.9649,True,True,False,,,B4A-FT-005-ENGLISH,B4A-FT-005,orders_average_tax_by_status,english,validation,What is the average tax amount for orders whose status is 'cancelled'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'cancelled';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'cancelled';",4.0381,True,True,False,,,B4A-FT-005-ARABIC,B4A-FT-005,orders_average_tax_by_status,arabic,validation,ما متوسط مبلغ الضريبة للطلبات التي حالتها 'cancelled'؟,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'cancelled';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'cancelled';",4.4306,True,True,False,,,B4A-FT-005-FRENCH,B4A-FT-005,orders_average_tax_by_status,french,validation,Quel est le montant moyen de la taxe dont le statut est 'cancelled' ?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'cancelled';",B2_original_zeroshot
+"SELECT 
+    order_id, 
+    status, 
+    tax_amount
+FROM 
+    build4all_research.orders
+WHERE 
+    status = 'cancelled';",4.8346,True,True,False,,,B4A-FT-005-LEBANESE_ARABIZI,B4A-FT-005,orders_average_tax_by_status,lebanese_arabizi,validation,Adde moutawassit el tax lal orders yalli status taba3a 'cancelled'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'cancelled';",B2_original_zeroshot
+SELECT AVG(tax_amount) FROM build4all_research.orders WHERE status = 'completed';,3.7347,True,True,False,,,B4A-FT-010-ENGLISH,B4A-FT-010,orders_average_tax_by_status,english,validation,What is the average tax amount for orders whose status is 'completed'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'completed';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'completed';",4.2918,True,True,False,,,B4A-FT-010-ARABIC,B4A-FT-010,orders_average_tax_by_status,arabic,validation,ما متوسط مبلغ الضريبة للطلبات التي حالتها 'completed'؟,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'completed';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'completed';",4.3021,True,True,False,,,B4A-FT-010-FRENCH,B4A-FT-010,orders_average_tax_by_status,french,validation,Quel est le montant moyen de la taxe dont le statut est 'completed' ?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'completed';",B2_original_zeroshot
+"SELECT 
+    order_id, 
+    subtotal, 
+    tax_amount, 
+    shipping_amount, 
+    discount_amount, 
+    total_amount
+FROM 
+    build4all_research.orders
+WHERE 
+    status = 'completed';",6.7733,True,True,False,,,B4A-FT-010-LEBANESE_ARABIZI,B4A-FT-010,orders_average_tax_by_status,lebanese_arabizi,validation,Adde moutawassit el tax lal orders yalli status taba3a 'completed'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'completed';",B2_original_zeroshot
+SELECT AVG(tax_amount) FROM build4all_research.orders WHERE status = 'pending';,3.7492,True,True,False,,,B4A-FT-015-ENGLISH,B4A-FT-015,orders_average_tax_by_status,english,validation,What is the average tax amount for orders whose status is 'pending'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'pending';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'pending';",4.4041,True,True,False,,,B4A-FT-015-ARABIC,B4A-FT-015,orders_average_tax_by_status,arabic,validation,ما متوسط مبلغ الضريبة للطلبات التي حالتها 'pending'؟,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'pending';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'pending';",4.0802,True,True,False,,,B4A-FT-015-FRENCH,B4A-FT-015,orders_average_tax_by_status,french,validation,Quel est le montant moyen de la taxe dont le statut est 'pending' ?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'pending';",B2_original_zeroshot
+"SELECT 
+    order_id, 
+    status, 
+    tax_amount 
+FROM 
+    build4all_research.orders 
+WHERE 
+    status = 'pending';",5.5656,True,True,False,,,B4A-FT-015-LEBANESE_ARABIZI,B4A-FT-015,orders_average_tax_by_status,lebanese_arabizi,validation,Adde moutawassit el tax lal orders yalli status taba3a 'pending'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'pending';",B2_original_zeroshot
+SELECT AVG(tax_amount) FROM build4all_research.orders WHERE status = 'processing';,3.5477,True,True,False,,,B4A-FT-020-ENGLISH,B4A-FT-020,orders_average_tax_by_status,english,validation,What is the average tax amount for orders whose status is 'processing'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'processing';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'processing';",4.5122,True,True,False,,,B4A-FT-020-ARABIC,B4A-FT-020,orders_average_tax_by_status,arabic,validation,ما متوسط مبلغ الضريبة للطلبات التي حالتها 'processing'؟,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'processing';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'processing';",4.0395,True,True,False,,,B4A-FT-020-FRENCH,B4A-FT-020,orders_average_tax_by_status,french,validation,Quel est le montant moyen de la taxe dont le statut est 'processing' ?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'processing';",B2_original_zeroshot
+"SELECT 
+    order_id, 
+    subtotal, 
+    tax_amount, 
+    shipping_amount, 
+    discount_amount, 
+    total_amount
+FROM 
+    build4all_research.orders
+WHERE 
+    status = 'processing';",6.3196,True,True,False,,,B4A-FT-020-LEBANESE_ARABIZI,B4A-FT-020,orders_average_tax_by_status,lebanese_arabizi,validation,Adde moutawassit el tax lal orders yalli status taba3a 'processing'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'processing';",B2_original_zeroshot
+SELECT AVG(tax_amount) FROM build4all_research.orders WHERE status = 'refunded';,3.6694,True,True,False,,,B4A-FT-025-ENGLISH,B4A-FT-025,orders_average_tax_by_status,english,validation,What is the average tax amount for orders whose status is 'refunded'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'refunded';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'refunded';",4.2366,True,True,False,,,B4A-FT-025-ARABIC,B4A-FT-025,orders_average_tax_by_status,arabic,validation,ما متوسط مبلغ الضريبة للطلبات التي حالتها 'refunded'؟,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'refunded';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_refunded_tax
+FROM build4all_research.orders
+WHERE status = 'refunded';",4.2256,True,True,False,,,B4A-FT-025-FRENCH,B4A-FT-025,orders_average_tax_by_status,french,validation,Quel est le montant moyen de la taxe dont le statut est 'refunded' ?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'refunded';",B2_original_zeroshot
+"SELECT 
+    order_id, 
+    status, 
+    tax_amount 
+FROM 
+    build4all_research.orders 
+WHERE 
+    status = 'refunded';",4.8932,True,True,False,,,B4A-FT-025-LEBANESE_ARABIZI,B4A-FT-025,orders_average_tax_by_status,lebanese_arabizi,validation,Adde moutawassit el tax lal orders yalli status taba3a 'refunded'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'refunded';",B2_original_zeroshot
+SELECT AVG(tax_amount) FROM build4all_research.orders WHERE status = 'shipped';,4.2393,True,True,False,,,B4A-FT-030-ENGLISH,B4A-FT-030,orders_average_tax_by_status,english,validation,What is the average tax amount for orders whose status is 'shipped'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'shipped';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'shipped';",4.2574,True,True,False,,,B4A-FT-030-ARABIC,B4A-FT-030,orders_average_tax_by_status,arabic,validation,ما متوسط مبلغ الضريبة للطلبات التي حالتها 'shipped'؟,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'shipped';",B2_original_zeroshot
+"SELECT AVG(tax_amount) AS average_tax_amount
+FROM build4all_research.orders
+WHERE status = 'shipped';",4.91,True,True,False,,,B4A-FT-030-FRENCH,B4A-FT-030,orders_average_tax_by_status,french,validation,Quel est le montant moyen de la taxe dont le statut est 'shipped' ?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'shipped';",B2_original_zeroshot
+"SELECT 
+    o.order_id,
+    o.order_date,
+    o.status,
+    o.subtotal,
+    o.tax_amount,
+    o.shipping_amount,
+    o.discount_amount,
+    o.total_amount
+FROM 
+    build4all_research.orders o
+WHERE 
+    o.status = 'shipped';",7.4777,True,True,False,,,B4A-FT-030-LEBANESE_ARABIZI,B4A-FT-030,orders_average_tax_by_status,lebanese_arabizi,validation,Adde moutawassit el tax lal orders yalli status taba3a 'shipped'?,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'shipped';",B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,4.0271,True,True,True,,,B4A-FT-051-ENGLISH,B4A-FT-051,payment_method_count,english,validation,What is the number of payments made using 'bank_transfer'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,3.6499,True,True,True,,,B4A-FT-051-ARABIC,B4A-FT-051,payment_method_count,arabic,validation,ما عدد عمليات الدفع باستخدام طريقة 'bank_transfer'؟,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';,4.8539,True,True,False,,,B4A-FT-051-FRENCH,B4A-FT-051,payment_method_count,french,validation,Quel est le nombre de paiements effectué avec la méthode 'bank_transfer' ?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,3.642,True,True,True,,,B4A-FT-051-LEBANESE_ARABIZI,B4A-FT-051,payment_method_count,lebanese_arabizi,validation,Adde 3adad el payments bi tari2et 'bank_transfer'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_method = 'bank_transfer' 
+AND payment_status = 'paid';",4.8196,True,True,True,,,B4A-FT-055-ENGLISH,B4A-FT-055,payment_method_paid_total,english,validation,What is the total amount of successful paid payments made using 'bank_transfer'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT SUM(paid_amount) FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';,4.5499,True,True,True,,,B4A-FT-055-ARABIC,B4A-FT-055,payment_method_paid_total,arabic,validation,ما إجمالي المدفوعات الناجحة باستخدام طريقة 'bank_transfer'؟,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_status = 'paid' 
+AND payment_method = 'bank_transfer';",5.0374,True,True,True,,,B4A-FT-055-FRENCH,B4A-FT-055,payment_method_paid_total,french,validation,Quel est le montant total des paiements réussis effectué avec la méthode 'bank_transfer' ?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT COUNT(*) AS total_paid_bank_transfers
+FROM payments
+WHERE payment_method = 'bank_transfer'
+AND payment_status = 'paid';",4.4131,True,True,False,,,B4A-FT-055-LEBANESE_ARABIZI,B4A-FT-055,payment_method_paid_total,lebanese_arabizi,validation,Adde majmou3 el paid payments bi tari2et 'bank_transfer'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,3.6631,True,True,True,,,B4A-FT-056-ENGLISH,B4A-FT-056,payment_method_count,english,validation,What is the number of payments made using 'cash_on_delivery'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,3.8032,True,True,True,,,B4A-FT-056-ARABIC,B4A-FT-056,payment_method_count,arabic,validation,ما عدد عمليات الدفع باستخدام طريقة 'cash_on_delivery'؟,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';,4.2943,True,True,False,,,B4A-FT-056-FRENCH,B4A-FT-056,payment_method_count,french,validation,Quel est le nombre de paiements effectué avec la méthode 'cash_on_delivery' ?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,B2_original_zeroshot
+"SELECT COUNT(*) AS total_payments
+FROM build4all_research.payments
+WHERE payment_method = 'cash_on_delivery';",4.802,True,True,True,,,B4A-FT-056-LEBANESE_ARABIZI,B4A-FT-056,payment_method_count,lebanese_arabizi,validation,Adde 3adad el payments bi tari2et 'cash_on_delivery'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_method = 'cash_on_delivery' 
+AND payment_status = 'paid';",4.8492,True,True,True,,,B4A-FT-060-ENGLISH,B4A-FT-060,payment_method_paid_total,english,validation,What is the total amount of successful paid payments made using 'cash_on_delivery'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT SUM(paid_amount) FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';,5.5102,True,True,True,,,B4A-FT-060-ARABIC,B4A-FT-060,payment_method_paid_total,arabic,validation,ما إجمالي المدفوعات الناجحة باستخدام طريقة 'cash_on_delivery'؟,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_status = 'paid' 
+AND payment_method = 'cash_on_delivery';",4.9031,True,True,True,,,B4A-FT-060-FRENCH,B4A-FT-060,payment_method_paid_total,french,validation,Quel est le montant total des paiements réussis effectué avec la méthode 'cash_on_delivery' ?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT COUNT(*) AS total_paid_cash_on_delivery_payments
+FROM build4all_research.payments
+WHERE payment_method = 'cash_on_delivery'
+AND payment_status = 'paid';",5.8515,True,True,False,,,B4A-FT-060-LEBANESE_ARABIZI,B4A-FT-060,payment_method_paid_total,lebanese_arabizi,validation,Adde majmou3 el paid payments bi tari2et 'cash_on_delivery'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';,4.2455,True,True,False,,,B4A-FT-061-ENGLISH,B4A-FT-061,payment_method_count,english,validation,What is the number of payments made using 'credit_card'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'credit_card';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'credit_card';,4.0232,True,True,True,,,B4A-FT-061-ARABIC,B4A-FT-061,payment_method_count,arabic,validation,ما عدد عمليات الدفع باستخدام طريقة 'credit_card'؟,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'credit_card';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';,4.2413,True,True,False,,,B4A-FT-061-FRENCH,B4A-FT-061,payment_method_count,french,validation,Quel est le nombre de paiements effectué avec la méthode 'credit_card' ?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'credit_card';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'credit_card';,3.6342,True,True,True,,,B4A-FT-061-LEBANESE_ARABIZI,B4A-FT-061,payment_method_count,lebanese_arabizi,validation,Adde 3adad el payments bi tari2et 'credit_card'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'credit_card';,B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_method = 'credit_card' 
+AND payment_status = 'paid';",5.1844,True,True,True,,,B4A-FT-065-ENGLISH,B4A-FT-065,payment_method_paid_total,english,validation,What is the total amount of successful paid payments made using 'credit_card'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT SUM(paid_amount) FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';,4.5591,True,True,True,,,B4A-FT-065-ARABIC,B4A-FT-065,payment_method_paid_total,arabic,validation,ما إجمالي المدفوعات الناجحة باستخدام طريقة 'credit_card'؟,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_status = 'paid' 
+AND payment_method = 'credit_card';",5.2896,True,True,True,,,B4A-FT-065-FRENCH,B4A-FT-065,payment_method_paid_total,french,validation,Quel est le montant total des paiements réussis effectué avec la méthode 'credit_card' ?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT COUNT(*) AS total_paid_credit_card_payments
+FROM build4all_research.payments
+WHERE payment_method = 'credit_card'
+AND payment_status = 'paid';",4.966,True,True,False,,,B4A-FT-065-LEBANESE_ARABIZI,B4A-FT-065,payment_method_paid_total,lebanese_arabizi,validation,Adde majmou3 el paid payments bi tari2et 'credit_card'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';,4.8745,True,True,False,,,B4A-FT-066-ENGLISH,B4A-FT-066,payment_method_count,english,validation,What is the number of payments made using 'debit_card'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'debit_card';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'debit_card';,3.6376,True,True,True,,,B4A-FT-066-ARABIC,B4A-FT-066,payment_method_count,arabic,validation,ما عدد عمليات الدفع باستخدام طريقة 'debit_card'؟,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'debit_card';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';,4.7389,True,True,False,,,B4A-FT-066-FRENCH,B4A-FT-066,payment_method_count,french,validation,Quel est le nombre de paiements effectué avec la méthode 'debit_card' ?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'debit_card';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'debit_card';,3.6535,True,True,True,,,B4A-FT-066-LEBANESE_ARABIZI,B4A-FT-066,payment_method_count,lebanese_arabizi,validation,Adde 3adad el payments bi tari2et 'debit_card'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'debit_card';,B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_method = 'debit_card' 
+AND payment_status = 'paid';",4.7384,True,True,True,,,B4A-FT-070-ENGLISH,B4A-FT-070,payment_method_paid_total,english,validation,What is the total amount of successful paid payments made using 'debit_card'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT SUM(paid_amount) FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';,4.5226,True,True,True,,,B4A-FT-070-ARABIC,B4A-FT-070,payment_method_paid_total,arabic,validation,ما إجمالي المدفوعات الناجحة باستخدام طريقة 'debit_card'؟,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_status = 'paid' 
+AND payment_method = 'debit_card';",4.8097,True,True,True,,,B4A-FT-070-FRENCH,B4A-FT-070,payment_method_paid_total,french,validation,Quel est le montant total des paiements réussis effectué avec la méthode 'debit_card' ?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT COUNT(*) AS total_paid_debit_card_payments
+FROM build4all_research.payments
+WHERE payment_method = 'debit_card'
+AND payment_status = 'paid';",5.0536,True,True,False,,,B4A-FT-070-LEBANESE_ARABIZI,B4A-FT-070,payment_method_paid_total,lebanese_arabizi,validation,Adde majmou3 el paid payments bi tari2et 'debit_card'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,3.6282,True,True,True,,,B4A-FT-071-ENGLISH,B4A-FT-071,payment_method_count,english,validation,What is the number of payments made using 'digital_wallet'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,3.7576,True,True,True,,,B4A-FT-071-ARABIC,B4A-FT-071,payment_method_count,arabic,validation,ما عدد عمليات الدفع باستخدام طريقة 'digital_wallet'؟,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';,4.2181,True,True,False,,,B4A-FT-071-FRENCH,B4A-FT-071,payment_method_count,french,validation,Quel est le nombre de paiements effectué avec la méthode 'digital_wallet' ?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,4.109,True,True,True,,,B4A-FT-071-LEBANESE_ARABIZI,B4A-FT-071,payment_method_count,lebanese_arabizi,validation,Adde 3adad el payments bi tari2et 'digital_wallet'?,SELECT COUNT(*) AS payment_count FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_method = 'digital_wallet' 
+AND payment_status = 'paid';",4.8019,True,True,True,,,B4A-FT-075-ENGLISH,B4A-FT-075,payment_method_paid_total,english,validation,What is the total amount of successful paid payments made using 'digital_wallet'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT SUM(paid_amount) FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';,5.0958,True,True,True,,,B4A-FT-075-ARABIC,B4A-FT-075,payment_method_paid_total,arabic,validation,ما إجمالي المدفوعات الناجحة باستخدام طريقة 'digital_wallet'؟,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT SUM(paid_amount) 
+FROM build4all_research.payments 
+WHERE payment_status = 'paid' 
+AND payment_method = 'digital_wallet';",4.804,True,True,True,,,B4A-FT-075-FRENCH,B4A-FT-075,payment_method_paid_total,french,validation,Quel est le montant total des paiements réussis effectué avec la méthode 'digital_wallet' ?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",B2_original_zeroshot
+"SELECT COUNT(*) AS total_paid_payments
+FROM build4all_research.payments
+WHERE payment_method = 'digital_wallet'
+AND payment_status = 'paid';",5.2594,True,True,False,,,B4A-FT-075-LEBANESE_ARABIZI,B4A-FT-075,payment_method_paid_total,lebanese_arabizi,validation,Adde majmou3 el paid payments bi tari2et 'digital_wallet'?,"SELECT ROUND(SUM(paid_amount), 2) AS paid_total_amount FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",B2_original_zeroshot
+SELECT AVG(price) FROM build4all_research.products WHERE status = 'active';,3.5119,True,True,False,,,B4A-FT-077-ENGLISH,B4A-FT-077,products_average_price_by_status,english,validation,What is the average list price where product status is 'active'?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'active';",B2_original_zeroshot
+"SELECT AVG(price) AS average_price
+FROM build4all_research.products
+WHERE status = 'active';",4.1038,True,True,False,,,B4A-FT-077-ARABIC,B4A-FT-077,products_average_price_by_status,arabic,validation,ما متوسط سعر القائمة عندما تكون حالة المنتج 'active'؟,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'active';",B2_original_zeroshot
+"SELECT AVG(price) AS average_catalog_price
+FROM build4all_research.products
+WHERE status = 'active';",4.0333,True,True,False,,,B4A-FT-077-FRENCH,B4A-FT-077,products_average_price_by_status,french,validation,Quel est le prix catalogue moyen lorsque le statut du produit est 'active' ?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'active';",B2_original_zeroshot
+"SELECT product_id, name, price, sale_price, status 
+FROM build4all_research.products 
+WHERE status = 'active';",4.3745,True,True,False,,,B4A-FT-077-LEBANESE_ARABIZI,B4A-FT-077,products_average_price_by_status,lebanese_arabizi,validation,Adde moutawassit el price lama product status ykoun 'active'?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'active';",B2_original_zeroshot
+"SELECT SUM(sale_price * stock) AS inventory_value
+FROM build4all_research.products
+WHERE status = 'active' AND sale_price IS NOT NULL;",5.4973,True,True,False,,,B4A-FT-079-ENGLISH,B4A-FT-079,products_inventory_value_by_status,english,validation,What is the inventory value using sale price when available where product status is 'active'?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'active';",B2_original_zeroshot
+"SELECT SUM(stock * (COALESCE(sale_price, price) * 0.9)) AS total_stock_value_with_discount
+FROM products
+JOIN categories ON products.category_id = categories.category_id
+WHERE products.status = 'active'
+AND categories.parent_category_id IS NOT NULL;",7.0279,True,True,False,,,B4A-FT-079-ARABIC,B4A-FT-079,products_inventory_value_by_status,arabic,validation,ما قيمة المخزون باستخدام سعر التخفيض عند توفره عندما تكون حالة المنتج 'active'؟,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'active';",B2_original_zeroshot
+"SELECT SUM(CASE WHEN p.sale_price IS NOT NULL THEN p.sale_price ELSE p.price END * p.stock) AS total_stock_value
+FROM build4all_research.products p
+WHERE p.status = 'active';",5.827,True,True,True,,,B4A-FT-079-FRENCH,B4A-FT-079,products_inventory_value_by_status,french,validation,Quel est le valeur du stock utilisant le prix soldé lorsqu'il existe lorsque le statut du produit est 'active' ?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'active';",B2_original_zeroshot
+"SELECT 
+    p.product_id,
+    p.name,
+    p.sale_price,
+    p.stock,
+    p.status
+FROM 
+    build4all_research.products p
+WHERE 
+    p.sale_price IS NOT NULL
+    AND p.status = 'active';",7.1854,True,True,False,,,B4A-FT-079-LEBANESE_ARABIZI,B4A-FT-079,products_inventory_value_by_status,lebanese_arabizi,validation,Adde 2imet el inventory 3a sale price iza mawjoude lama product status ykoun 'active'?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'active';",B2_original_zeroshot
+"SELECT COUNT(DISTINCT products.category_id)
+FROM products
+WHERE products.status = 'active';",3.6026,True,True,True,,,B4A-FT-080-ENGLISH,B4A-FT-080,products_categories_by_status,english,validation,What is the number of represented categories where product status is 'active'?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'active';,B2_original_zeroshot
+SELECT COUNT(DISTINCT category_id) FROM build4all_research.products WHERE status = 'active';,3.9643,True,True,True,,,B4A-FT-080-ARABIC,B4A-FT-080,products_categories_by_status,arabic,validation,ما عدد الفئات الممثلة عندما تكون حالة المنتج 'active'؟,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'active';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT products.category_id)
+FROM products
+WHERE products.status = 'active';",3.6336,True,True,True,,,B4A-FT-080-FRENCH,B4A-FT-080,products_categories_by_status,french,validation,Quel est le nombre de catégories représentées lorsque le statut du produit est 'active' ?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'active';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+JOIN build4all_research.categories c ON p.category_id = c.category_id
+WHERE p.status = 'active';",5.62,True,True,True,,,B4A-FT-080-LEBANESE_ARABIZI,B4A-FT-080,products_categories_by_status,lebanese_arabizi,validation,Adde 3adad el categories lama product status ykoun 'active'?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'active';,B2_original_zeroshot
+SELECT AVG(price) FROM build4all_research.products WHERE status = 'discontinued';,3.8801,True,True,False,,,B4A-FT-082-ENGLISH,B4A-FT-082,products_average_price_by_status,english,validation,What is the average list price where product status is 'discontinued'?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'discontinued';",B2_original_zeroshot
+"SELECT AVG(price) AS average_price
+FROM build4all_research.products
+WHERE status = 'discontinued';",4.0547,True,True,False,,,B4A-FT-082-ARABIC,B4A-FT-082,products_average_price_by_status,arabic,validation,ما متوسط سعر القائمة عندما تكون حالة المنتج 'discontinued'؟,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'discontinued';",B2_original_zeroshot
+"SELECT AVG(price) AS average_catalog_price
+FROM build4all_research.products
+WHERE status = 'discontinued';",4.6321,True,True,False,,,B4A-FT-082-FRENCH,B4A-FT-082,products_average_price_by_status,french,validation,Quel est le prix catalogue moyen lorsque le statut du produit est 'discontinued' ?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'discontinued';",B2_original_zeroshot
+"SELECT product_id, name, price, sale_price, status 
+FROM build4all_research.products 
+WHERE status = 'discontinued';",4.3824,True,True,False,,,B4A-FT-082-LEBANESE_ARABIZI,B4A-FT-082,products_average_price_by_status,lebanese_arabizi,validation,Adde moutawassit el price lama product status ykoun 'discontinued'?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'discontinued';",B2_original_zeroshot
+"SELECT SUM(stock * COALESCE(sale_price, price)) AS inventory_value
+FROM build4all_research.products
+WHERE status = 'discontinued';",5.1308,True,True,True,,,B4A-FT-084-ENGLISH,B4A-FT-084,products_inventory_value_by_status,english,validation,What is the inventory value using sale price when available where product status is 'discontinued'?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'discontinued';",B2_original_zeroshot
+"SELECT SUM(stock) AS total_stock
+FROM build4all_research.products
+WHERE status = 'discontinued'
+AND sale_price IS NOT NULL;",4.5892,True,True,False,,,B4A-FT-084-ARABIC,B4A-FT-084,products_inventory_value_by_status,arabic,validation,ما قيمة المخزون باستخدام سعر التخفيض عند توفره عندما تكون حالة المنتج 'discontinued'؟,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'discontinued';",B2_original_zeroshot
+"SELECT SUM(CASE WHEN p.sale_price IS NOT NULL THEN p.sale_price * pr.stock ELSE p.price * pr.stock END) AS total_stock_value
+FROM build4all_research.products pr
+JOIN build4all_research.products p ON pr.product_id = p.product_id
+WHERE p.status = 'discontinued';",8.5034,True,True,True,,,B4A-FT-084-FRENCH,B4A-FT-084,products_inventory_value_by_status,french,validation,Quel est le valeur du stock utilisant le prix soldé lorsqu'il existe lorsque le statut du produit est 'discontinued' ?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'discontinued';",B2_original_zeroshot
+"SELECT 
+    p.product_id,
+    p.name,
+    p.sale_price,
+    p.stock,
+    p.status
+FROM 
+    build4all_research.products p
+WHERE 
+    p.sale_price IS NOT NULL
+    AND p.status = 'discontinued';",6.6702,True,True,False,,,B4A-FT-084-LEBANESE_ARABIZI,B4A-FT-084,products_inventory_value_by_status,lebanese_arabizi,validation,Adde 2imet el inventory 3a sale price iza mawjoude lama product status ykoun 'discontinued'?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'discontinued';",B2_original_zeroshot
+"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+WHERE p.status = 'discontinued';",4.3919,True,True,True,,,B4A-FT-085-ENGLISH,B4A-FT-085,products_categories_by_status,english,validation,What is the number of represented categories where product status is 'discontinued'?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'discontinued';,B2_original_zeroshot
+SELECT COUNT(DISTINCT category_id) FROM build4all_research.products WHERE status = 'discontinued';,3.8833,True,True,True,,,B4A-FT-085-ARABIC,B4A-FT-085,products_categories_by_status,arabic,validation,ما عدد الفئات الممثلة عندما تكون حالة المنتج 'discontinued'؟,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'discontinued';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT products.category_id)
+FROM products
+WHERE products.status = 'discontinued';",4.2274,True,True,True,,,B4A-FT-085-FRENCH,B4A-FT-085,products_categories_by_status,french,validation,Quel est le nombre de catégories représentées lorsque le statut du produit est 'discontinued' ?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'discontinued';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+JOIN build4all_research.categories c ON p.category_id = c.category_id
+WHERE p.status = 'discontinued';",5.7094,True,True,True,,,B4A-FT-085-LEBANESE_ARABIZI,B4A-FT-085,products_categories_by_status,lebanese_arabizi,validation,Adde 3adad el categories lama product status ykoun 'discontinued'?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'discontinued';,B2_original_zeroshot
+"SELECT AVG(price) AS average_list_price
+FROM build4all_research.products
+WHERE status = 'out_of_stock';",4.7729,True,True,False,,,B4A-FT-087-ENGLISH,B4A-FT-087,products_average_price_by_status,english,validation,What is the average list price where product status is 'out_of_stock'?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'out_of_stock';",B2_original_zeroshot
+"SELECT AVG(price) AS average_price
+FROM build4all_research.products
+WHERE status = 'out_of_stock';",4.0058,True,True,False,,,B4A-FT-087-ARABIC,B4A-FT-087,products_average_price_by_status,arabic,validation,ما متوسط سعر القائمة عندما تكون حالة المنتج 'out_of_stock'؟,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'out_of_stock';",B2_original_zeroshot
+"SELECT AVG(price) AS average_catalog_price
+FROM build4all_research.products
+WHERE status = 'out_of_stock';",4.5752,True,True,False,,,B4A-FT-087-FRENCH,B4A-FT-087,products_average_price_by_status,french,validation,Quel est le prix catalogue moyen lorsque le statut du produit est 'out_of_stock' ?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'out_of_stock';",B2_original_zeroshot
+"SELECT product_id, name, price, sale_price, status 
+FROM build4all_research.products 
+WHERE status = 'out_of_stock';",4.4932,True,True,False,,,B4A-FT-087-LEBANESE_ARABIZI,B4A-FT-087,products_average_price_by_status,lebanese_arabizi,validation,Adde moutawassit el price lama product status ykoun 'out_of_stock'?,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'out_of_stock';",B2_original_zeroshot
+"SELECT SUM(stock * sale_price) AS inventory_value
+FROM build4all_research.products
+WHERE status = 'out_of_stock'
+AND sale_price IS NOT NULL;",5.0502,True,True,True,,,B4A-FT-089-ENGLISH,B4A-FT-089,products_inventory_value_by_status,english,validation,What is the inventory value using sale price when available where product status is 'out_of_stock'?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'out_of_stock';",B2_original_zeroshot
+"SELECT SUM(stock) AS total_stock
+FROM build4all_research.products
+WHERE status = 'out_of_stock'
+AND sale_price IS NOT NULL;",4.7193,True,True,True,,,B4A-FT-089-ARABIC,B4A-FT-089,products_inventory_value_by_status,arabic,validation,ما قيمة المخزون باستخدام سعر التخفيض عند توفره عندما تكون حالة المنتج 'out_of_stock'؟,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'out_of_stock';",B2_original_zeroshot
+"SELECT SUM(CASE WHEN p.status = 'out_of_stock' THEN COALESCE(p.sale_price, 0) * p.stock ELSE 0 END) AS total_stock_value_with_sale_price
+FROM build4all_research.products p
+WHERE p.status = 'out_of_stock';",7.9409,True,True,True,,,B4A-FT-089-FRENCH,B4A-FT-089,products_inventory_value_by_status,french,validation,Quel est le valeur du stock utilisant le prix soldé lorsqu'il existe lorsque le statut du produit est 'out_of_stock' ?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'out_of_stock';",B2_original_zeroshot
+"SELECT 
+    p.product_id,
+    p.name,
+    p.sale_price,
+    p.stock,
+    p.status
+FROM 
+    build4all_research.products p
+WHERE 
+    p.sale_price IS NOT NULL
+    AND p.status = 'out_of_stock';",6.715,True,True,False,,,B4A-FT-089-LEBANESE_ARABIZI,B4A-FT-089,products_inventory_value_by_status,lebanese_arabizi,validation,Adde 2imet el inventory 3a sale price iza mawjoude lama product status ykoun 'out_of_stock'?,"SELECT ROUND(SUM(stock * COALESCE(sale_price, price)), 2) AS inventory_value FROM build4all_research.products WHERE status = 'out_of_stock';",B2_original_zeroshot
+"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+WHERE p.status = 'out_of_stock';",4.8082,True,True,True,,,B4A-FT-090-ENGLISH,B4A-FT-090,products_categories_by_status,english,validation,What is the number of represented categories where product status is 'out_of_stock'?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'out_of_stock';,B2_original_zeroshot
+SELECT COUNT(DISTINCT category_id) FROM build4all_research.products WHERE status = 'out_of_stock' AND category_id IS NOT NULL;,4.6212,True,True,True,,,B4A-FT-090-ARABIC,B4A-FT-090,products_categories_by_status,arabic,validation,ما عدد الفئات الممثلة عندما تكون حالة المنتج 'out_of_stock'؟,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'out_of_stock';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+WHERE p.status = 'out_of_stock';",4.9714,True,True,True,,,B4A-FT-090-FRENCH,B4A-FT-090,products_categories_by_status,french,validation,Quel est le nombre de catégories représentées lorsque le statut du produit est 'out_of_stock' ?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'out_of_stock';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+JOIN build4all_research.categories c ON p.category_id = c.category_id
+WHERE p.status = 'out_of_stock';",5.6588,True,True,True,,,B4A-FT-090-LEBANESE_ARABIZI,B4A-FT-090,products_categories_by_status,lebanese_arabizi,validation,Adde 3adad el categories lama product status ykoun 'out_of_stock'?,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'out_of_stock';,B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_amount
+FROM build4all_research.orders
+WHERE status = 'cancelled';",4.6219,True,True,False,,,B4A-FT-003-ENGLISH,B4A-FT-003,orders_average_amount_by_status,english,final_test,What is the average order amount for orders whose status is 'cancelled'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'cancelled';",B2_original_zeroshot
+SELECT AVG(total_amount) FROM build4all_research.orders WHERE status = 'cancelled';,3.4763,True,True,False,,,B4A-FT-003-ARABIC,B4A-FT-003,orders_average_amount_by_status,arabic,final_test,ما متوسط قيمة الطلب للطلبات التي حالتها 'cancelled'؟,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'cancelled';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_cancelled_order_amount
+FROM build4all_research.orders
+WHERE status = 'cancelled';",4.2845,True,True,False,,,B4A-FT-003-FRENCH,B4A-FT-003,orders_average_amount_by_status,french,final_test,Quel est le montant moyen des commandes dont le statut est 'cancelled' ?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'cancelled';",B2_original_zeroshot
+SELECT * FROM build4all_research.orders WHERE status = 'cancelled';,3.334,True,True,False,,,B4A-FT-003-LEBANESE_ARABIZI,B4A-FT-003,orders_average_amount_by_status,lebanese_arabizi,final_test,Adde moutawassit 2imet el order lal orders yalli status taba3a 'cancelled'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'cancelled';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_amount
+FROM build4all_research.orders
+WHERE status = 'completed';",4.0674,True,True,False,,,B4A-FT-008-ENGLISH,B4A-FT-008,orders_average_amount_by_status,english,final_test,What is the average order amount for orders whose status is 'completed'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'completed';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_value
+FROM build4all_research.orders
+WHERE status = 'completed';",4.6108,True,True,False,,,B4A-FT-008-ARABIC,B4A-FT-008,orders_average_amount_by_status,arabic,final_test,ما متوسط قيمة الطلب للطلبات التي حالتها 'completed'؟,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'completed';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_value
+FROM build4all_research.orders
+WHERE status = 'completed';",4.053,True,True,False,,,B4A-FT-008-FRENCH,B4A-FT-008,orders_average_amount_by_status,french,final_test,Quel est le montant moyen des commandes dont le statut est 'completed' ?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'completed';",B2_original_zeroshot
+SELECT * FROM build4all_research.orders WHERE status = 'completed';,3.2571,True,True,False,,,B4A-FT-008-LEBANESE_ARABIZI,B4A-FT-008,orders_average_amount_by_status,lebanese_arabizi,final_test,Adde moutawassit 2imet el order lal orders yalli status taba3a 'completed'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'completed';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_amount
+FROM build4all_research.orders
+WHERE status = 'pending';",4.2756,True,True,False,,,B4A-FT-013-ENGLISH,B4A-FT-013,orders_average_amount_by_status,english,final_test,What is the average order amount for orders whose status is 'pending'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'pending';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_pending_order_value
+FROM build4all_research.orders
+WHERE status = 'pending';",4.1435,True,True,False,,,B4A-FT-013-ARABIC,B4A-FT-013,orders_average_amount_by_status,arabic,final_test,ما متوسط قيمة الطلب للطلبات التي حالتها 'pending'؟,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'pending';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_pending_order_amount
+FROM build4all_research.orders
+WHERE status = 'pending';",4.768,True,True,False,,,B4A-FT-013-FRENCH,B4A-FT-013,orders_average_amount_by_status,french,final_test,Quel est le montant moyen des commandes dont le statut est 'pending' ?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'pending';",B2_original_zeroshot
+SELECT * FROM build4all_research.orders WHERE status = 'pending';,3.2839,True,True,False,,,B4A-FT-013-LEBANESE_ARABIZI,B4A-FT-013,orders_average_amount_by_status,lebanese_arabizi,final_test,Adde moutawassit 2imet el order lal orders yalli status taba3a 'pending'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'pending';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_amount
+FROM build4all_research.orders
+WHERE status = 'processing';",4.0799,True,True,False,,,B4A-FT-018-ENGLISH,B4A-FT-018,orders_average_amount_by_status,english,final_test,What is the average order amount for orders whose status is 'processing'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'processing';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_value
+FROM build4all_research.orders
+WHERE status = 'processing';",4.3639,True,True,False,,,B4A-FT-018-ARABIC,B4A-FT-018,orders_average_amount_by_status,arabic,final_test,ما متوسط قيمة الطلب للطلبات التي حالتها 'processing'؟,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'processing';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_amount
+FROM build4all_research.orders
+WHERE status = 'processing';",4.1069,True,True,False,,,B4A-FT-018-FRENCH,B4A-FT-018,orders_average_amount_by_status,french,final_test,Quel est le montant moyen des commandes dont le statut est 'processing' ?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'processing';",B2_original_zeroshot
+SELECT * FROM build4all_research.orders WHERE status = 'processing';,3.7376,True,True,False,,,B4A-FT-018-LEBANESE_ARABIZI,B4A-FT-018,orders_average_amount_by_status,lebanese_arabizi,final_test,Adde moutawassit 2imet el order lal orders yalli status taba3a 'processing'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'processing';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_refunded_order_amount
+FROM build4all_research.orders
+WHERE status = 'refunded';",4.2682,True,True,False,,,B4A-FT-023-ENGLISH,B4A-FT-023,orders_average_amount_by_status,english,final_test,What is the average order amount for orders whose status is 'refunded'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'refunded';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_refunded_order_value
+FROM build4all_research.orders
+WHERE status = 'refunded';",4.2946,True,True,False,,,B4A-FT-023-ARABIC,B4A-FT-023,orders_average_amount_by_status,arabic,final_test,ما متوسط قيمة الطلب للطلبات التي حالتها 'refunded'؟,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'refunded';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_refunded_order_amount
+FROM build4all_research.orders
+WHERE status = 'refunded';",4.2836,True,True,False,,,B4A-FT-023-FRENCH,B4A-FT-023,orders_average_amount_by_status,french,final_test,Quel est le montant moyen des commandes dont le statut est 'refunded' ?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'refunded';",B2_original_zeroshot
+SELECT * FROM build4all_research.orders WHERE status = 'refunded';,3.3605,True,True,False,,,B4A-FT-023-LEBANESE_ARABIZI,B4A-FT-023,orders_average_amount_by_status,lebanese_arabizi,final_test,Adde moutawassit 2imet el order lal orders yalli status taba3a 'refunded'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'refunded';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_amount
+FROM build4all_research.orders
+WHERE status = 'shipped';",4.7286,True,True,False,,,B4A-FT-028-ENGLISH,B4A-FT-028,orders_average_amount_by_status,english,final_test,What is the average order amount for orders whose status is 'shipped'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'shipped';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_value
+FROM build4all_research.orders
+WHERE status = 'shipped';",4.1076,True,True,False,,,B4A-FT-028-ARABIC,B4A-FT-028,orders_average_amount_by_status,arabic,final_test,ما متوسط قيمة الطلب للطلبات التي حالتها 'shipped'؟,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'shipped';",B2_original_zeroshot
+"SELECT AVG(total_amount) AS average_order_amount
+FROM build4all_research.orders
+WHERE status = 'shipped';",4.1475,True,True,False,,,B4A-FT-028-FRENCH,B4A-FT-028,orders_average_amount_by_status,french,final_test,Quel est le montant moyen des commandes dont le statut est 'shipped' ?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'shipped';",B2_original_zeroshot
+SELECT * FROM build4all_research.orders WHERE status = 'shipped';,3.3115,True,True,False,,,B4A-FT-028-LEBANESE_ARABIZI,B4A-FT-028,orders_average_amount_by_status,lebanese_arabizi,final_test,Adde moutawassit 2imet el order lal orders yalli status taba3a 'shipped'?,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'shipped';",B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'failed';",4.6683,True,True,True,,,B4A-FT-034-ENGLISH,B4A-FT-034,payments_orders_by_status,english,final_test,What is the number of distinct orders where payment status is 'failed'?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'failed';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'failed';",5.2895,True,True,True,,,B4A-FT-034-ARABIC,B4A-FT-034,payments_orders_by_status,arabic,final_test,ما عدد الطلبات المختلفة عندما تكون حالة الدفع 'failed'؟,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'failed';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'failed';",4.672,True,True,True,,,B4A-FT-034-FRENCH,B4A-FT-034,payments_orders_by_status,french,final_test,Quel est le nombre de commandes distinctes lorsque le statut de paiement est 'failed' ?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'failed';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT order_id) AS unique_order_count
+FROM payments
+WHERE payment_status = 'failed';",4.45,True,True,True,,,B4A-FT-034-LEBANESE_ARABIZI,B4A-FT-034,payments_orders_by_status,lebanese_arabizi,final_test,Adde 3adad el orders el mokhtalfe lama payment status ykoun 'failed'?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'failed';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'paid';",4.6805,True,True,True,,,B4A-FT-039-ENGLISH,B4A-FT-039,payments_orders_by_status,english,final_test,What is the number of distinct orders where payment status is 'paid'?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'paid';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'paid';",4.8811,True,True,True,,,B4A-FT-039-ARABIC,B4A-FT-039,payments_orders_by_status,arabic,final_test,ما عدد الطلبات المختلفة عندما تكون حالة الدفع 'paid'؟,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'paid';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'paid';",4.6315,True,True,True,,,B4A-FT-039-FRENCH,B4A-FT-039,payments_orders_by_status,french,final_test,Quel est le nombre de commandes distinctes lorsque le statut de paiement est 'paid' ?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'paid';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT order_id) AS unique_paid_orders
+FROM payments
+WHERE payment_status = 'paid';",3.9434,True,True,True,,,B4A-FT-039-LEBANESE_ARABIZI,B4A-FT-039,payments_orders_by_status,lebanese_arabizi,final_test,Adde 3adad el orders el mokhtalfe lama payment status ykoun 'paid'?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'paid';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'pending';",4.9099,True,True,True,,,B4A-FT-044-ENGLISH,B4A-FT-044,payments_orders_by_status,english,final_test,What is the number of distinct orders where payment status is 'pending'?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'pending';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'pending';",4.5573,True,True,True,,,B4A-FT-044-ARABIC,B4A-FT-044,payments_orders_by_status,arabic,final_test,ما عدد الطلبات المختلفة عندما تكون حالة الدفع 'pending'؟,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'pending';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'pending';",5.3343,True,True,True,,,B4A-FT-044-FRENCH,B4A-FT-044,payments_orders_by_status,french,final_test,Quel est le nombre de commandes distinctes lorsque le statut de paiement est 'pending' ?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'pending';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT order_id) AS unique_order_count
+FROM payments
+WHERE payment_status = 'pending';",3.9952,True,True,True,,,B4A-FT-044-LEBANESE_ARABIZI,B4A-FT-044,payments_orders_by_status,lebanese_arabizi,final_test,Adde 3adad el orders el mokhtalfe lama payment status ykoun 'pending'?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'pending';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'refunded';",5.2229,True,True,True,,,B4A-FT-049-ENGLISH,B4A-FT-049,payments_orders_by_status,english,final_test,What is the number of distinct orders where payment status is 'refunded'?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'refunded';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'refunded';",4.7839,True,True,True,,,B4A-FT-049-ARABIC,B4A-FT-049,payments_orders_by_status,arabic,final_test,ما عدد الطلبات المختلفة عندما تكون حالة الدفع 'refunded'؟,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'refunded';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'refunded';",4.9799,True,True,True,,,B4A-FT-049-FRENCH,B4A-FT-049,payments_orders_by_status,french,final_test,Quel est le nombre de commandes distinctes lorsque le statut de paiement est 'refunded' ?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'refunded';,B2_original_zeroshot
+"SELECT COUNT(DISTINCT order_id) AS unique_refunded_orders
+FROM payments
+WHERE payment_status = 'refunded';",4.1288,True,True,True,,,B4A-FT-049-LEBANESE_ARABIZI,B4A-FT-049,payments_orders_by_status,lebanese_arabizi,final_test,Adde 3adad el orders el mokhtalfe lama payment status ykoun 'refunded'?,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'refunded';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.products WHERE status = 'active';,3.4022,True,True,True,,,B4A-FT-076-ENGLISH,B4A-FT-076,products_count_by_status,english,final_test,What is the number of products where product status is 'active'?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'active';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.products WHERE status = 'active';,3.7547,True,True,True,,,B4A-FT-076-ARABIC,B4A-FT-076,products_count_by_status,arabic,final_test,ما عدد المنتجات عندما تكون حالة المنتج 'active'؟,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'active';,B2_original_zeroshot
+"SELECT COUNT(*) 
+FROM build4all_research.products 
+WHERE status = 'active';",3.4962,True,True,True,,,B4A-FT-076-FRENCH,B4A-FT-076,products_count_by_status,french,final_test,Quel est le nombre de produits lorsque le statut du produit est 'active' ?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'active';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.products WHERE status = 'active';,3.3408,True,True,True,,,B4A-FT-076-LEBANESE_ARABIZI,B4A-FT-076,products_count_by_status,lebanese_arabizi,final_test,Adde 3adad el products lama product status ykoun 'active'?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'active';,B2_original_zeroshot
+"SELECT COUNT(*) 
+FROM build4all_research.products 
+WHERE status = 'discontinued';",4.0262,True,True,True,,,B4A-FT-081-ENGLISH,B4A-FT-081,products_count_by_status,english,final_test,What is the number of products where product status is 'discontinued'?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'discontinued';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.products WHERE status = 'discontinued';,3.4067,True,True,True,,,B4A-FT-081-ARABIC,B4A-FT-081,products_count_by_status,arabic,final_test,ما عدد المنتجات عندما تكون حالة المنتج 'discontinued'؟,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'discontinued';,B2_original_zeroshot
+"SELECT COUNT(*) 
+FROM build4all_research.products 
+WHERE status = 'discontinued';",3.635,True,True,True,,,B4A-FT-081-FRENCH,B4A-FT-081,products_count_by_status,french,final_test,Quel est le nombre de produits lorsque le statut du produit est 'discontinued' ?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'discontinued';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.products WHERE status = 'discontinued';,3.4568,True,True,True,,,B4A-FT-081-LEBANESE_ARABIZI,B4A-FT-081,products_count_by_status,lebanese_arabizi,final_test,Adde 3adad el products lama product status ykoun 'discontinued'?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'discontinued';,B2_original_zeroshot
+"SELECT COUNT(*) 
+FROM build4all_research.products 
+WHERE status = 'out_of_stock';",3.7155,True,True,True,,,B4A-FT-086-ENGLISH,B4A-FT-086,products_count_by_status,english,final_test,What is the number of products where product status is 'out_of_stock'?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'out_of_stock';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.products WHERE status = 'out_of_stock';,3.905,True,True,True,,,B4A-FT-086-ARABIC,B4A-FT-086,products_count_by_status,arabic,final_test,ما عدد المنتجات عندما تكون حالة المنتج 'out_of_stock'؟,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'out_of_stock';,B2_original_zeroshot
+"SELECT COUNT(*) 
+FROM build4all_research.products 
+WHERE status = 'out_of_stock';",3.7162,True,True,True,,,B4A-FT-086-FRENCH,B4A-FT-086,products_count_by_status,french,final_test,Quel est le nombre de produits lorsque le statut du produit est 'out_of_stock' ?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'out_of_stock';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.products WHERE status = 'out_of_stock';,3.4942,True,True,True,,,B4A-FT-086-LEBANESE_ARABIZI,B4A-FT-086,products_count_by_status,lebanese_arabizi,final_test,Adde 3adad el products lama product status ykoun 'out_of_stock'?,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'out_of_stock';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,4.197,True,True,True,,,B4A-FT-091-ENGLISH,B4A-FT-091,events_count_by_type,english,final_test,What is the number of events for event type 'add_to_cart'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,3.6788,True,True,True,,,B4A-FT-091-ARABIC,B4A-FT-091,events_count_by_type,arabic,final_test,ما عدد الأحداث لنوع الحدث 'add_to_cart'؟,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,3.7121,True,True,True,,,B4A-FT-091-FRENCH,B4A-FT-091,events_count_by_type,french,final_test,Quel est le nombre d'événements pour le type d'événement 'add_to_cart' ?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,B2_original_zeroshot
+"SELECT COUNT(*) AS total_add_to_cart_events
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart';",4.3689,True,True,True,,,B4A-FT-091-LEBANESE_ARABIZI,B4A-FT-091,events_count_by_type,lebanese_arabizi,final_test,Adde 3adad el events la event type 'add_to_cart'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.6202,True,True,False,,,B4A-FT-095-ENGLISH,B4A-FT-095,events_top_products_by_type,english,final_test,What is the top five products by event count for event type 'add_to_cart'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'add_to_cart' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.9714,True,True,False,,,B4A-FT-095-ARABIC,B4A-FT-095,events_top_products_by_type,arabic,final_test,ما أعلى خمسة منتجات حسب عدد الأحداث لنوع الحدث 'add_to_cart'؟,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'add_to_cart' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.6215,True,True,False,,,B4A-FT-095-FRENCH,B4A-FT-095,events_top_products_by_type,french,final_test,Quel est le cinq produits principaux par nombre d'événements pour le type d'événement 'add_to_cart' ?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'add_to_cart' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.6197,True,True,False,,,B4A-FT-095-LEBANESE_ARABIZI,B4A-FT-095,events_top_products_by_type,lebanese_arabizi,final_test,Adde top 5 products 7asab 3adad el events la event type 'add_to_cart'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'add_to_cart' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'purchase';,3.4507,True,True,True,,,B4A-FT-096-ENGLISH,B4A-FT-096,events_count_by_type,english,final_test,What is the number of events for event type 'purchase'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'purchase';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'purchase';,3.9711,True,True,True,,,B4A-FT-096-ARABIC,B4A-FT-096,events_count_by_type,arabic,final_test,ما عدد الأحداث لنوع الحدث 'purchase'؟,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'purchase';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'purchase';,3.5254,True,True,True,,,B4A-FT-096-FRENCH,B4A-FT-096,events_count_by_type,french,final_test,Quel est le nombre d'événements pour le type d'événement 'purchase' ?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'purchase';,B2_original_zeroshot
+"SELECT COUNT(*) AS total_purchase_events
+FROM build4all_research.product_events
+WHERE event_type = 'purchase';",4.1231,True,True,True,,,B4A-FT-096-LEBANESE_ARABIZI,B4A-FT-096,events_count_by_type,lebanese_arabizi,final_test,Adde 3adad el events la event type 'purchase'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'purchase';,B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'purchase'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.4551,True,True,False,,,B4A-FT-100-ENGLISH,B4A-FT-100,events_top_products_by_type,english,final_test,What is the top five products by event count for event type 'purchase'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'purchase' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'purchase'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.5686,True,True,False,,,B4A-FT-100-ARABIC,B4A-FT-100,events_top_products_by_type,arabic,final_test,ما أعلى خمسة منتجات حسب عدد الأحداث لنوع الحدث 'purchase'؟,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'purchase' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'purchase'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.4453,True,True,False,,,B4A-FT-100-FRENCH,B4A-FT-100,events_top_products_by_type,french,final_test,Quel est le cinq produits principaux par nombre d'événements pour le type d'événement 'purchase' ?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'purchase' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT p.product_id, p.name, COUNT(pe.event_id) AS event_count
+FROM build4all_research.products p
+JOIN build4all_research.product_events pe ON p.product_id = pe.product_id
+WHERE pe.event_type = 'purchase'
+GROUP BY p.product_id, p.name
+ORDER BY event_count DESC
+LIMIT 5;",8.8754,True,True,True,,,B4A-FT-100-LEBANESE_ARABIZI,B4A-FT-100,events_top_products_by_type,lebanese_arabizi,final_test,Adde top 5 products 7asab 3adad el events la event type 'purchase'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'purchase' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart';",4.159,True,True,True,,,B4A-FT-101-ENGLISH,B4A-FT-101,events_count_by_type,english,final_test,What is the number of events for event type 'remove_from_cart'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,4.1154,True,True,True,,,B4A-FT-101-ARABIC,B4A-FT-101,events_count_by_type,arabic,final_test,ما عدد الأحداث لنوع الحدث 'remove_from_cart'؟,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,B2_original_zeroshot
+"SELECT COUNT(*) 
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart';",3.8392,True,True,True,,,B4A-FT-101-FRENCH,B4A-FT-101,events_count_by_type,french,final_test,Quel est le nombre d'événements pour le type d'événement 'remove_from_cart' ?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,B2_original_zeroshot
+"SELECT COUNT(*) AS total_remove_from_cart_events
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart';",4.3521,True,True,True,,,B4A-FT-101-LEBANESE_ARABIZI,B4A-FT-101,events_count_by_type,lebanese_arabizi,final_test,Adde 3adad el events la event type 'remove_from_cart'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.8597,True,True,False,,,B4A-FT-105-ENGLISH,B4A-FT-105,events_top_products_by_type,english,final_test,What is the top five products by event count for event type 'remove_from_cart'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'remove_from_cart' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.6736,True,True,False,,,B4A-FT-105-ARABIC,B4A-FT-105,events_top_products_by_type,arabic,final_test,ما أعلى خمسة منتجات حسب عدد الأحداث لنوع الحدث 'remove_from_cart'؟,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'remove_from_cart' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.657,True,True,False,,,B4A-FT-105-FRENCH,B4A-FT-105,events_top_products_by_type,french,final_test,Quel est le cinq produits principaux par nombre d'événements pour le type d'événement 'remove_from_cart' ?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'remove_from_cart' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.8,True,True,False,,,B4A-FT-105-LEBANESE_ARABIZI,B4A-FT-105,events_top_products_by_type,lebanese_arabizi,final_test,Adde top 5 products 7asab 3adad el events la event type 'remove_from_cart'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'remove_from_cart' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT COUNT(*) AS search_event_count
+FROM build4all_research.product_events
+WHERE event_type = 'search';",3.9864,True,True,True,,,B4A-FT-106-ENGLISH,B4A-FT-106,events_count_by_type,english,final_test,What is the number of events for event type 'search'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'search';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'search';,3.551,True,True,True,,,B4A-FT-106-ARABIC,B4A-FT-106,events_count_by_type,arabic,final_test,ما عدد الأحداث لنوع الحدث 'search'؟,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'search';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'search';,3.9522,True,True,True,,,B4A-FT-106-FRENCH,B4A-FT-106,events_count_by_type,french,final_test,Quel est le nombre d'événements pour le type d'événement 'search' ?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'search';,B2_original_zeroshot
+"SELECT COUNT(*) AS total_search_events
+FROM build4all_research.product_events
+WHERE event_type = 'search';",4.0267,True,True,True,,,B4A-FT-106-LEBANESE_ARABIZI,B4A-FT-106,events_count_by_type,lebanese_arabizi,final_test,Adde 3adad el events la event type 'search'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'search';,B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'search'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.9282,True,True,False,,,B4A-FT-110-ENGLISH,B4A-FT-110,events_top_products_by_type,english,final_test,What is the top five products by event count for event type 'search'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'search' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'search'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.4472,True,True,False,,,B4A-FT-110-ARABIC,B4A-FT-110,events_top_products_by_type,arabic,final_test,ما أعلى خمسة منتجات حسب عدد الأحداث لنوع الحدث 'search'؟,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'search' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'search'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",6.1819,True,True,False,,,B4A-FT-110-FRENCH,B4A-FT-110,events_top_products_by_type,french,final_test,Quel est le cinq produits principaux par nombre d'événements pour le type d'événement 'search' ?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'search' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT p.product_id, p.name, COUNT(pe.event_id) AS event_count
+FROM build4all_research.products p
+JOIN build4all_research.product_events pe ON p.product_id = pe.product_id
+WHERE pe.event_type = 'search'
+GROUP BY p.product_id, p.name
+ORDER BY event_count DESC
+LIMIT 5;",7.8676,True,True,True,,,B4A-FT-110-LEBANESE_ARABIZI,B4A-FT-110,events_top_products_by_type,lebanese_arabizi,final_test,Adde top 5 products 7asab 3adad el events la event type 'search'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'search' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'view';",4.2861,True,True,True,,,B4A-FT-111-ENGLISH,B4A-FT-111,events_count_by_type,english,final_test,What is the number of events for event type 'view'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'view';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'view';,3.5051,True,True,True,,,B4A-FT-111-ARABIC,B4A-FT-111,events_count_by_type,arabic,final_test,ما عدد الأحداث لنوع الحدث 'view'؟,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'view';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'view';,3.491,True,True,True,,,B4A-FT-111-FRENCH,B4A-FT-111,events_count_by_type,french,final_test,Quel est le nombre d'événements pour le type d'événement 'view' ?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'view';,B2_original_zeroshot
+"SELECT COUNT(*) AS total_views
+FROM build4all_research.product_events
+WHERE event_type = 'view';",3.9429,True,True,True,,,B4A-FT-111-LEBANESE_ARABIZI,B4A-FT-111,events_count_by_type,lebanese_arabizi,final_test,Adde 3adad el events la event type 'view'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'view';,B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'view'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.4601,True,True,False,,,B4A-FT-115-ENGLISH,B4A-FT-115,events_top_products_by_type,english,final_test,What is the top five products by event count for event type 'view'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'view' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'view'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.7997,True,True,False,,,B4A-FT-115-ARABIC,B4A-FT-115,events_top_products_by_type,arabic,final_test,ما أعلى خمسة منتجات حسب عدد الأحداث لنوع الحدث 'view'؟,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'view' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'view'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.4604,True,True,False,,,B4A-FT-115-FRENCH,B4A-FT-115,events_top_products_by_type,french,final_test,Quel est le cinq produits principaux par nombre d'événements pour le type d'événement 'view' ?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'view' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT p.product_id, p.name, COUNT(pe.event_id) AS event_count
+FROM build4all_research.products p
+JOIN build4all_research.product_events pe ON p.product_id = pe.product_id
+WHERE pe.event_type = 'view'
+GROUP BY p.product_id, p.name
+ORDER BY event_count DESC
+LIMIT 5;",8.3549,True,True,True,,,B4A-FT-115-LEBANESE_ARABIZI,B4A-FT-115,events_top_products_by_type,lebanese_arabizi,final_test,Adde top 5 products 7asab 3adad el events la event type 'view'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'view' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist';",3.87,True,True,True,,,B4A-FT-116-ENGLISH,B4A-FT-116,events_count_by_type,english,final_test,What is the number of events for event type 'wishlist'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'wishlist';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'wishlist';,3.5666,True,True,True,,,B4A-FT-116-ARABIC,B4A-FT-116,events_count_by_type,arabic,final_test,ما عدد الأحداث لنوع الحدث 'wishlist'؟,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'wishlist';,B2_original_zeroshot
+SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'wishlist';,3.4681,True,True,True,,,B4A-FT-116-FRENCH,B4A-FT-116,events_count_by_type,french,final_test,Quel est le nombre d'événements pour le type d'événement 'wishlist' ?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'wishlist';,B2_original_zeroshot
+"SELECT COUNT(*) AS total_wishlist_events
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist';",4.4132,True,True,True,,,B4A-FT-116-LEBANESE_ARABIZI,B4A-FT-116,events_count_by_type,lebanese_arabizi,final_test,Adde 3adad el events la event type 'wishlist'?,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'wishlist';,B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.556,True,True,False,,,B4A-FT-120-ENGLISH,B4A-FT-120,events_top_products_by_type,english,final_test,What is the top five products by event count for event type 'wishlist'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'wishlist' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",6.1881,True,True,False,,,B4A-FT-120-ARABIC,B4A-FT-120,events_top_products_by_type,arabic,final_test,ما أعلى خمسة منتجات حسب عدد الأحداث لنوع الحدث 'wishlist'؟,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'wishlist' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT product_id, COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist'
+GROUP BY product_id
+ORDER BY event_count DESC
+LIMIT 5;",5.4026,True,True,False,,,B4A-FT-120-FRENCH,B4A-FT-120,events_top_products_by_type,french,final_test,Quel est le cinq produits principaux par nombre d'événements pour le type d'événement 'wishlist' ?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'wishlist' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot
+"SELECT p.product_id, p.name, COUNT(pe.event_id) AS event_count
+FROM build4all_research.products p
+JOIN build4all_research.product_events pe ON p.product_id = pe.product_id
+WHERE pe.event_type = 'wishlist'
+GROUP BY p.product_id, p.name
+ORDER BY event_count DESC
+LIMIT 5;",8.8537,True,True,True,,,B4A-FT-120-LEBANESE_ARABIZI,B4A-FT-120,events_top_products_by_type,lebanese_arabizi,final_test,Adde top 5 products 7asab 3adad el events la event type 'wishlist'?,"SELECT p.product_id, p.name, COUNT(*) AS event_count FROM build4all_research.product_events AS pe JOIN build4all_research.products AS p ON p.product_id = pe.product_id WHERE pe.event_type = 'wishlist' GROUP BY p.product_id, p.name ORDER BY event_count DESC, p.product_id LIMIT 5;",B2_original_zeroshot

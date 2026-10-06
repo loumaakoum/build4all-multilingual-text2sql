@@ -1,0 +1,11 @@
+{
+  "frozen_utc": "2026-10-06T20:38:26.350312+00:00",
+  "pd_test_generations_before_freeze": 0,
+  "v1_threshold": 0.93,
+  "v2a_threshold": 0.15,
+  "v2a_oof_accuracy_old200": 0.975,
+  "v2b_threshold": 0.83,
+  "v2b_accuracy_old200": 0.97,
+  "routes_sha256": "09d92cdf7c91df378f465cf0e72bdf366c88816e0e519a75fbec186b934ed8e0",
+  "controller_source_sha256": "f2a1aadf4fa07d5fb7406544c85090d2f03546d1bb2da2c7cd90cab04d3497d5"
+}
