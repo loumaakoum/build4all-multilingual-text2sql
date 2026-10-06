@@ -1,0 +1,7 @@
+tax_rule_id,name,rate_percent,country,region,applies_to_shipping,active
+1,Standard VAT,11.00,Lebanon,,t,t
+2,Beirut Standard VAT,11.00,Lebanon,Beirut,t,t
+3,North Standard VAT,11.00,Lebanon,North,t,t
+4,South Standard VAT,11.00,Lebanon,South,t,t
+5,Bekaa Standard VAT,11.00,Lebanon,Bekaa,t,t
+6,Export Zero Rate,0.00,,,f,f

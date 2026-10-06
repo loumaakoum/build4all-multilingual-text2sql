@@ -1,0 +1,6 @@
+shipping_method_id,name,method_type,cost,country,region,active
+1,Standard Delivery,standard,5.00,Lebanon,,t
+2,Express Delivery,express,12.00,Lebanon,,t
+3,Same-Day Beirut,same_day,15.00,Lebanon,Beirut,t
+4,Wholesale Freight,freight,35.00,Lebanon,,t
+5,Store Pickup,pickup,0.00,Lebanon,,t

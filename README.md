@@ -37,6 +37,7 @@ data/
   build4all_custom600_strict_template_split.csv    the strict template-family split used in the paper
   build4all_policy_test_v1.csv                     PD-Test: 128 questions (16 policy-dependent + 16 control intents)
   policies/                                        the four policy documents used for retrieval
+  database/                                        export of the research database + schema.sql + restore.sh
 notebooks/
   1_main_experiment.ipynb       split, QLoRA training, fine-tuned/RAG evaluation, router v1, locked test (Kaggle, 2x T4)
   2_revision_experiments.ipynb  reproduction check, zero-/few-shot baselines, Qwen2.5-Coder, router features (Colab, T4)
@@ -60,7 +61,22 @@ python src/paper_statistics.py
 
 The notebooks need a GPU (one 16 GB T4 is enough for inference), the four policy PDFs, and read access to the
 `build4all_research` PostgreSQL schema through a secret named `NEON_DATABASE_URL`. The research database contains
-synthetic data only. <!-- NOTE (author): add the database export / SQL dump link here once published. -->
+synthetic data only.
+
+### Restoring the research database
+
+`data/database/` holds a full export of the 10 tables (CSV), the table definitions (`schema.sql`), and a restore
+script. On any PostgreSQL server (local, Docker, or a free Neon project):
+
+```bash
+cd data/database
+./restore.sh "postgresql://user:password@host:5432/dbname"
+```
+
+This creates the `build4all_research` schema and loads 5,000 orders, 12,500 order items, 5,000 payments,
+25,000 product events, 500 customers, 150 products, and the small lookup tables. Then set `NEON_DATABASE_URL` to the
+same connection URL in the notebooks. All 182 gold queries (150 benchmark intents and 32 PD-Test intents) execute
+on the restored database.
 
 The fine-tuned QLoRA adapter (175 MB) is not stored in this repository.
 <!-- NOTE (author): add the Hugging Face / Zenodo link of the adapter here. -->
