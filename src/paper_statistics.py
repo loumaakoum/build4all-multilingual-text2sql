@@ -122,7 +122,8 @@ def show(rows, title):
 
 
 # ------------------------------------------------------- strict benchmark
-SYSTEMS = ["orig_zero", "orig_few", "orig_rag", "coder_zero", "coder_few", "ft_direct", "ft_rag"]
+SYSTEMS = ["orig_zero", "orig_few", "orig_zero_conv", "orig_few_conv", "orig_rag", "coder_zero", "coder_few",
+           "ft_direct", "ft_rag"]
 
 
 def strict_benchmark():
@@ -158,25 +159,32 @@ def strict_benchmark():
 
     print("\nBy language (validation + locked test, out of 50):")
     lang = w.groupby("language")[[f"{k}_{s}" for k in ["strict", "tolerant"]
-                                  for s in ["orig_zero", "orig_few", "coder_few", "ft_direct", "ft_rag"]]].sum()
+                                  for s in ["orig_zero", "orig_few", "orig_zero_conv", "orig_few_conv", "coder_few",
+                                            "ft_direct", "ft_rag"]]].sum()
     print(lang.astype(int).T)
 
     comps = []
     for split, d in [("validation", w[w.split == "validation"]), ("final_test", w[w.split == "final_test"]),
                      ("pooled", w)]:
         for k in ["strict", "tolerant"]:
-            for a, b in [("ft_direct", "orig_few"), ("ft_direct", "orig_zero"), ("ft_direct", "coder_few"),
-                         ("ft_rag", "ft_direct")]:
+            for a, b in [("ft_direct", "orig_few"), ("ft_direct", "orig_zero"), ("ft_direct", "orig_few_conv"),
+                         ("ft_direct", "orig_zero_conv"), ("ft_direct", "coder_few"), ("ft_rag", "ft_direct")]:
                 c = compare(d, f"{k}_{a}", f"{k}_{b}", split)
                 comps.append(c)
     show(comps, "Paired comparisons (cluster = intent):")
 
     az = w[w.language == "lebanese_arabizi"]
     show([compare(az, f"{k}_ft_direct", f"{k}_{b}", "Arabizi, pooled")
-          for k in ["strict", "tolerant"] for b in ["orig_zero", "orig_few"]],
+          for k in ["strict", "tolerant"] for b in ["orig_zero", "orig_few", "orig_zero_conv", "orig_few_conv"]],
          "Lebanese Arabizi only (one question per intent, so the intent-level tests reduce to"
          " question level; the family-level permutation is the conservative check):")
 
+    nt = w[w.family != "events_top_products_by_type"]
+    print("\nWithout the top-products family (strict):",
+          {s: f"{int(nt[f'strict_{s}'].sum())}/{len(nt)}" for s in ["orig_zero_conv", "orig_few_conv", "ft_direct"]},
+          "| by split:", nt.groupby("split")[["strict_orig_few_conv", "strict_ft_direct"]].sum().astype(int).to_dict())
+    show([compare(nt, "strict_ft_direct", "strict_orig_few_conv", "pooled, without top-products family")],
+         "Fine-tuned vs few-shot +conventions without the top-products family:")
     d = w[w.split == "final_test"]
     disc = d[d.strict_ft_direct.astype(bool) != d.strict_orig_few.astype(bool)]
     print("\nLocked test, fine-tuned vs few-shot discordant pairs by family:",

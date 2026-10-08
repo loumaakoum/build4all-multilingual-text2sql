@@ -3259,3 +3259,1051 @@ WHERE pe.event_type = 'wishlist'
 GROUP BY p.product_id, p.name
 ORDER BY event_count DESC
 LIMIT 5;",True,True,correct
+orig_zero_conv,B4A-FT-005-ENGLISH,validation,B4A-FT-005,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_zero_conv,B4A-FT-005-ARABIC,validation,B4A-FT-005,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'cancelled';",True,True,correct
+orig_zero_conv,B4A-FT-005-FRENCH,validation,B4A-FT-005,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'cancelled';",True,True,correct
+orig_zero_conv,B4A-FT-005-LEBANESE_ARABIZI,validation,B4A-FT-005,orders_average_tax_by_status,lebanese_arabizi,"SELECT 
+    o.order_id,
+    o.subtotal,
+    o.tax_amount,
+    o.shipping_amount,
+    o.discount_amount,
+    o.total_amount
+FROM 
+    build4all_research.orders o
+WHERE 
+    o.status = 'cancelled';",False,False,other
+orig_zero_conv,B4A-FT-010-ENGLISH,validation,B4A-FT-010,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_zero_conv,B4A-FT-010-ARABIC,validation,B4A-FT-010,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'completed';",True,True,correct
+orig_zero_conv,B4A-FT-010-FRENCH,validation,B4A-FT-010,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'completed';",True,True,correct
+orig_zero_conv,B4A-FT-010-LEBANESE_ARABIZI,validation,B4A-FT-010,orders_average_tax_by_status,lebanese_arabizi,"SELECT 
+    o.order_id,
+    o.subtotal,
+    o.tax_amount,
+    o.shipping_amount,
+    o.discount_amount,
+    o.total_amount
+FROM 
+    build4all_research.orders o
+WHERE 
+    o.status = 'completed';",False,False,other
+orig_zero_conv,B4A-FT-015-ENGLISH,validation,B4A-FT-015,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-015-ARABIC,validation,B4A-FT-015,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-015-FRENCH,validation,B4A-FT-015,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-015-LEBANESE_ARABIZI,validation,B4A-FT-015,orders_average_tax_by_status,lebanese_arabizi,"SELECT 
+    o.order_id,
+    o.subtotal,
+    o.tax_amount,
+    o.shipping_amount,
+    o.discount_amount,
+    o.total_amount
+FROM 
+    build4all_research.orders o
+WHERE 
+    o.status = 'pending';",False,False,other
+orig_zero_conv,B4A-FT-020-ENGLISH,validation,B4A-FT-020,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_zero_conv,B4A-FT-020-ARABIC,validation,B4A-FT-020,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'processing';",True,True,correct
+orig_zero_conv,B4A-FT-020-FRENCH,validation,B4A-FT-020,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'processing';",True,True,correct
+orig_zero_conv,B4A-FT-020-LEBANESE_ARABIZI,validation,B4A-FT-020,orders_average_tax_by_status,lebanese_arabizi,"SELECT 
+    o.order_id,
+    o.subtotal,
+    o.tax_amount,
+    o.shipping_amount,
+    o.discount_amount,
+    o.total_amount
+FROM 
+    build4all_research.orders o
+WHERE 
+    o.status = 'processing';",False,False,other
+orig_zero_conv,B4A-FT-025-ENGLISH,validation,B4A-FT-025,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-025-ARABIC,validation,B4A-FT-025,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-025-FRENCH,validation,B4A-FT-025,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-025-LEBANESE_ARABIZI,validation,B4A-FT-025,orders_average_tax_by_status,lebanese_arabizi,"SELECT 
+    ROUND(SUM(orders.subtotal), 2) AS total_subtotal,
+    ROUND(SUM(orders.tax_amount), 2) AS total_tax_amount,
+    ROUND(SUM(orders.shipping_amount), 2) AS total_shipping_amount,
+    ROUND(SUM(orders.discount_amount), 2) AS total_discount_amount,
+    ROUND(SUM(orders.total_amount), 2) AS total_total_amount
+FROM 
+    build4all_research.orders
+WHERE 
+    orders.status = 'refunded';",False,False,other
+orig_zero_conv,B4A-FT-030-ENGLISH,validation,B4A-FT-030,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_zero_conv,B4A-FT-030-ARABIC,validation,B4A-FT-030,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'shipped';",True,True,correct
+orig_zero_conv,B4A-FT-030-FRENCH,validation,B4A-FT-030,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'shipped';",True,True,correct
+orig_zero_conv,B4A-FT-030-LEBANESE_ARABIZI,validation,B4A-FT-030,orders_average_tax_by_status,lebanese_arabizi,"SELECT 
+    ROUND(SUM(orders.subtotal), 2) AS total_subtotal,
+    ROUND(SUM(orders.tax_amount), 2) AS total_tax,
+    ROUND(SUM(orders.shipping_amount), 2) AS total_shipping,
+    ROUND(SUM(orders.discount_amount), 2) AS total_discount,
+    ROUND(SUM(orders.total_amount), 2) AS total_amount
+FROM 
+    build4all_research.orders
+WHERE 
+    orders.status = 'shipped';",False,False,other
+orig_zero_conv,B4A-FT-051-ENGLISH,validation,B4A-FT-051,payment_method_count,english,"SELECT COUNT(*) AS payment_count
+FROM build4all_research.payments
+WHERE payment_method = 'bank_transfer';",True,True,correct
+orig_zero_conv,B4A-FT-051-ARABIC,validation,B4A-FT-051,payment_method_count,arabic,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,True,True,correct
+orig_zero_conv,B4A-FT-051-FRENCH,validation,B4A-FT-051,payment_method_count,french,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';,False,False,other
+orig_zero_conv,B4A-FT-051-LEBANESE_ARABIZI,validation,B4A-FT-051,payment_method_count,lebanese_arabizi,"SELECT COUNT(*) AS total_payments
+FROM build4all_research.payments
+WHERE payment_method = 'bank_transfer';",True,True,correct
+orig_zero_conv,B4A-FT-055-ENGLISH,validation,B4A-FT-055,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-055-ARABIC,validation,B4A-FT-055,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-055-FRENCH,validation,B4A-FT-055,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_status = 'paid' AND payment_method = 'bank_transfer';",True,True,correct
+orig_zero_conv,B4A-FT-055-LEBANESE_ARABIZI,validation,B4A-FT-055,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount
+FROM build4all_research.payments
+WHERE payment_method = 'bank_transfer'
+AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-056-ENGLISH,validation,B4A-FT-056,payment_method_count,english,SELECT COUNT(*) AS count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';,False,False,other
+orig_zero_conv,B4A-FT-056-ARABIC,validation,B4A-FT-056,payment_method_count,arabic,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,True,True,correct
+orig_zero_conv,B4A-FT-056-FRENCH,validation,B4A-FT-056,payment_method_count,french,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';,False,False,other
+orig_zero_conv,B4A-FT-056-LEBANESE_ARABIZI,validation,B4A-FT-056,payment_method_count,lebanese_arabizi,"SELECT COUNT(*) AS total_payments
+FROM build4all_research.payments
+WHERE payment_method = 'cash_on_delivery';",True,True,correct
+orig_zero_conv,B4A-FT-060-ENGLISH,validation,B4A-FT-060,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-060-ARABIC,validation,B4A-FT-060,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-060-FRENCH,validation,B4A-FT-060,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_status = 'paid' AND payment_method = 'cash_on_delivery';",True,True,correct
+orig_zero_conv,B4A-FT-060-LEBANESE_ARABIZI,validation,B4A-FT-060,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount
+FROM build4all_research.payments
+WHERE payment_method = 'cash_on_delivery'
+AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-061-ENGLISH,validation,B4A-FT-061,payment_method_count,english,"SELECT COUNT(*) AS credit_card_payments_count
+FROM build4all_research.payments
+WHERE payment_method = 'credit_card';",True,True,correct
+orig_zero_conv,B4A-FT-061-ARABIC,validation,B4A-FT-061,payment_method_count,arabic,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'credit_card';,True,True,correct
+orig_zero_conv,B4A-FT-061-FRENCH,validation,B4A-FT-061,payment_method_count,french,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';,False,False,other
+orig_zero_conv,B4A-FT-061-LEBANESE_ARABIZI,validation,B4A-FT-061,payment_method_count,lebanese_arabizi,"SELECT COUNT(*) AS total_payments
+FROM build4all_research.payments
+WHERE payment_method = 'credit_card';",True,True,correct
+orig_zero_conv,B4A-FT-065-ENGLISH,validation,B4A-FT-065,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'credit_card' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-065-ARABIC,validation,B4A-FT-065,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'credit_card' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-065-FRENCH,validation,B4A-FT-065,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_status = 'paid' AND payment_method = 'credit_card';",True,True,correct
+orig_zero_conv,B4A-FT-065-LEBANESE_ARABIZI,validation,B4A-FT-065,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount
+FROM build4all_research.payments
+WHERE payment_method = 'credit_card' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-066-ENGLISH,validation,B4A-FT-066,payment_method_count,english,"SELECT COUNT(*) AS num_payments
+FROM build4all_research.payments
+WHERE payment_method = 'debit_card';",True,True,correct
+orig_zero_conv,B4A-FT-066-ARABIC,validation,B4A-FT-066,payment_method_count,arabic,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'debit_card';,True,True,correct
+orig_zero_conv,B4A-FT-066-FRENCH,validation,B4A-FT-066,payment_method_count,french,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';,False,False,other
+orig_zero_conv,B4A-FT-066-LEBANESE_ARABIZI,validation,B4A-FT-066,payment_method_count,lebanese_arabizi,"SELECT COUNT(*) AS total_payments
+FROM build4all_research.payments
+WHERE payment_method = 'debit_card';",True,True,correct
+orig_zero_conv,B4A-FT-070-ENGLISH,validation,B4A-FT-070,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'debit_card' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-070-ARABIC,validation,B4A-FT-070,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'debit_card' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-070-FRENCH,validation,B4A-FT-070,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_status = 'paid' AND payment_method = 'debit_card';",True,True,correct
+orig_zero_conv,B4A-FT-070-LEBANESE_ARABIZI,validation,B4A-FT-070,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount
+FROM build4all_research.payments
+WHERE payment_method = 'debit_card' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-071-ENGLISH,validation,B4A-FT-071,payment_method_count,english,"SELECT COUNT(*) AS digital_wallet_payments_count
+FROM build4all_research.payments
+WHERE payment_method = 'digital_wallet';",True,True,correct
+orig_zero_conv,B4A-FT-071-ARABIC,validation,B4A-FT-071,payment_method_count,arabic,SELECT COUNT(*) FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,True,True,correct
+orig_zero_conv,B4A-FT-071-FRENCH,validation,B4A-FT-071,payment_method_count,french,"SELECT COUNT(*) AS payment_count
+FROM build4all_research.payments
+WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",False,False,other
+orig_zero_conv,B4A-FT-071-LEBANESE_ARABIZI,validation,B4A-FT-071,payment_method_count,lebanese_arabizi,"SELECT COUNT(*) AS total_payments
+FROM build4all_research.payments
+WHERE payment_method = 'digital_wallet';",True,True,correct
+orig_zero_conv,B4A-FT-075-ENGLISH,validation,B4A-FT-075,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-075-ARABIC,validation,B4A-FT-075,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-075-FRENCH,validation,B4A-FT-075,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2)
+FROM build4all_research.payments
+WHERE payment_status = 'paid' AND payment_method = 'digital_wallet';",True,True,correct
+orig_zero_conv,B4A-FT-075-LEBANESE_ARABIZI,validation,B4A-FT-075,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount
+FROM build4all_research.payments
+WHERE payment_method = 'digital_wallet'
+AND payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-077-ENGLISH,validation,B4A-FT-077,products_average_price_by_status,english,"SELECT ROUND(AVG(price), 2) FROM build4all_research.products WHERE status = 'active';",True,True,correct
+orig_zero_conv,B4A-FT-077-ARABIC,validation,B4A-FT-077,products_average_price_by_status,arabic,"SELECT ROUND(AVG(price), 2)
+FROM build4all_research.products
+WHERE status = 'active';",True,True,correct
+orig_zero_conv,B4A-FT-077-FRENCH,validation,B4A-FT-077,products_average_price_by_status,french,"SELECT ROUND(AVG(price), 2)
+FROM build4all_research.products
+WHERE status = 'active';",True,True,correct
+orig_zero_conv,B4A-FT-077-LEBANESE_ARABIZI,validation,B4A-FT-077,products_average_price_by_status,lebanese_arabizi,"SELECT product_id, name, price
+FROM build4all_research.products
+WHERE status = 'active';",False,False,other
+orig_zero_conv,B4A-FT-079-ENGLISH,validation,B4A-FT-079,products_inventory_value_by_status,english,"SELECT ROUND(SUM(CASE WHEN p.sale_price IS NOT NULL THEN p.sale_price * p.stock ELSE p.price * p.stock END), 2) AS inventory_value
+FROM build4all_research.products p
+WHERE p.status = 'active';",True,True,correct
+orig_zero_conv,B4A-FT-079-ARABIC,validation,B4A-FT-079,products_inventory_value_by_status,arabic,"SELECT ROUND(SUM(CASE WHEN p.sale_price IS NOT NULL THEN p.sale_price ELSE p.price END * oi.quantity), 2)
+FROM build4all_research.order_items oi
+JOIN build4all_research.products p ON oi.product_id = p.product_id
+WHERE p.status = 'active';",False,False,other
+orig_zero_conv,B4A-FT-079-FRENCH,validation,B4A-FT-079,products_inventory_value_by_status,french,"SELECT SUM(CASE WHEN p.sale_price IS NOT NULL THEN p.sale_price * pr.stock ELSE p.price * pr.stock END) AS total_stock_value
+FROM build4all_research.products pr
+JOIN build4all_research.products p ON pr.product_id = p.product_id
+WHERE p.status = 'active';",True,True,correct
+orig_zero_conv,B4A-FT-079-LEBANESE_ARABIZI,validation,B4A-FT-079,products_inventory_value_by_status,lebanese_arabizi,"SELECT product_id, name, sale_price
+FROM build4all_research.products
+WHERE status = 'active'
+ORDER BY sale_price DESC, product_id;",False,False,other
+orig_zero_conv,B4A-FT-080-ENGLISH,validation,B4A-FT-080,products_categories_by_status,english,"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+WHERE p.status = 'active';",True,True,correct
+orig_zero_conv,B4A-FT-080-ARABIC,validation,B4A-FT-080,products_categories_by_status,arabic,"SELECT COUNT(DISTINCT products.category_id)
+FROM build4all_research.products
+WHERE products.status = 'active';",True,True,correct
+orig_zero_conv,B4A-FT-080-FRENCH,validation,B4A-FT-080,products_categories_by_status,french,"SELECT COUNT(DISTINCT products.category_id)
+FROM products
+WHERE products.status = 'active';",True,True,correct
+orig_zero_conv,B4A-FT-080-LEBANESE_ARABIZI,validation,B4A-FT-080,products_categories_by_status,lebanese_arabizi,"SELECT DISTINCT c.category_id, c.name
+FROM build4all_research.products p
+JOIN build4all_research.products_categories pc ON p.product_id = pc.product_id
+JOIN build4all_research.categories c ON pc.category_id = c.category_id
+WHERE p.status = 'active';",False,False,not_executed
+orig_zero_conv,B4A-FT-082-ENGLISH,validation,B4A-FT-082,products_average_price_by_status,english,"SELECT ROUND(AVG(price), 2) FROM build4all_research.products WHERE status = 'discontinued';",True,True,correct
+orig_zero_conv,B4A-FT-082-ARABIC,validation,B4A-FT-082,products_average_price_by_status,arabic,"SELECT ROUND(AVG(price), 2)
+FROM build4all_research.products
+WHERE status = 'discontinued';",True,True,correct
+orig_zero_conv,B4A-FT-082-FRENCH,validation,B4A-FT-082,products_average_price_by_status,french,"SELECT ROUND(AVG(price), 2)
+FROM build4all_research.products
+WHERE status = 'discontinued';",True,True,correct
+orig_zero_conv,B4A-FT-082-LEBANESE_ARABIZI,validation,B4A-FT-082,products_average_price_by_status,lebanese_arabizi,"SELECT product_id, name, price
+FROM build4all_research.products
+WHERE status = 'discontinued';",False,False,other
+orig_zero_conv,B4A-FT-084-ENGLISH,validation,B4A-FT-084,products_inventory_value_by_status,english,"SELECT SUM(stock * COALESCE(sale_price, price)) AS inventory_value
+FROM build4all_research.products
+WHERE status = 'discontinued';",True,True,correct
+orig_zero_conv,B4A-FT-084-ARABIC,validation,B4A-FT-084,products_inventory_value_by_status,arabic,"SELECT 
+    SUM(stock) AS total_stock
+FROM 
+    build4all_research.products
+WHERE 
+    status = 'discontinued'
+    AND sale_price IS NOT NULL;",False,False,other
+orig_zero_conv,B4A-FT-084-FRENCH,validation,B4A-FT-084,products_inventory_value_by_status,french,"SELECT SUM(CASE WHEN products.status = 'discontinued' THEN COALESCE(sale_price, price) * stock ELSE 0 END) AS total_stock_value
+FROM products
+WHERE products.status = 'discontinued';",True,True,correct
+orig_zero_conv,B4A-FT-084-LEBANESE_ARABIZI,validation,B4A-FT-084,products_inventory_value_by_status,lebanese_arabizi,"SELECT product_id, name, sale_price
+FROM build4all_research.products
+WHERE status = 'discontinued'
+ORDER BY sale_price DESC, product_id;",False,False,other
+orig_zero_conv,B4A-FT-085-ENGLISH,validation,B4A-FT-085,products_categories_by_status,english,"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+WHERE p.status = 'discontinued';",True,True,correct
+orig_zero_conv,B4A-FT-085-ARABIC,validation,B4A-FT-085,products_categories_by_status,arabic,"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+WHERE p.status = 'discontinued';",True,True,correct
+orig_zero_conv,B4A-FT-085-FRENCH,validation,B4A-FT-085,products_categories_by_status,french,"SELECT COUNT(DISTINCT products.category_id)
+FROM products
+WHERE products.status = 'discontinued';",True,True,correct
+orig_zero_conv,B4A-FT-085-LEBANESE_ARABIZI,validation,B4A-FT-085,products_categories_by_status,lebanese_arabizi,"SELECT DISTINCT c.category_id, c.name
+FROM build4all_research.products p
+JOIN build4all_research.products_categories pc ON p.product_id = pc.product_id
+JOIN build4all_research.categories c ON pc.category_id = c.category_id
+WHERE p.status = 'discontinued';",False,False,not_executed
+orig_zero_conv,B4A-FT-087-ENGLISH,validation,B4A-FT-087,products_average_price_by_status,english,"SELECT ROUND(AVG(price), 2) FROM build4all_research.products WHERE status = 'out_of_stock';",True,True,correct
+orig_zero_conv,B4A-FT-087-ARABIC,validation,B4A-FT-087,products_average_price_by_status,arabic,"SELECT ROUND(AVG(price), 2)
+FROM build4all_research.products
+WHERE status = 'out_of_stock';",True,True,correct
+orig_zero_conv,B4A-FT-087-FRENCH,validation,B4A-FT-087,products_average_price_by_status,french,"SELECT ROUND(AVG(price), 2)
+FROM build4all_research.products
+WHERE status = 'out_of_stock';",True,True,correct
+orig_zero_conv,B4A-FT-087-LEBANESE_ARABIZI,validation,B4A-FT-087,products_average_price_by_status,lebanese_arabizi,"SELECT product_id, name, price
+FROM build4all_research.products
+WHERE status = 'out_of_stock';",False,False,other
+orig_zero_conv,B4A-FT-089-ENGLISH,validation,B4A-FT-089,products_inventory_value_by_status,english,"SELECT SUM(stock * COALESCE(sale_price, price)) AS inventory_value
+FROM build4all_research.products
+WHERE status = 'out_of_stock';",True,True,correct
+orig_zero_conv,B4A-FT-089-ARABIC,validation,B4A-FT-089,products_inventory_value_by_status,arabic,"SELECT 
+    SUM(stock) AS total_stock
+FROM 
+    build4all_research.products
+WHERE 
+    status = 'out_of_stock'
+    AND sale_price IS NOT NULL;",True,True,correct
+orig_zero_conv,B4A-FT-089-FRENCH,validation,B4A-FT-089,products_inventory_value_by_status,french,"SELECT SUM(CASE WHEN products.status = 'out_of_stock' THEN COALESCE(sale_price, price) * stock ELSE 0 END) AS total_stock_value
+FROM products
+WHERE products.status = 'out_of_stock';",True,True,correct
+orig_zero_conv,B4A-FT-089-LEBANESE_ARABIZI,validation,B4A-FT-089,products_inventory_value_by_status,lebanese_arabizi,"SELECT product_id, name, sale_price
+FROM build4all_research.products
+WHERE status = 'out_of_stock'
+ORDER BY sale_price DESC, product_id;",False,False,other
+orig_zero_conv,B4A-FT-090-ENGLISH,validation,B4A-FT-090,products_categories_by_status,english,"SELECT COUNT(DISTINCT p.category_id)
+FROM build4all_research.products p
+WHERE p.status = 'out_of_stock';",True,True,correct
+orig_zero_conv,B4A-FT-090-ARABIC,validation,B4A-FT-090,products_categories_by_status,arabic,"SELECT COUNT(DISTINCT products.category_id) 
+FROM products 
+WHERE products.status = 'out_of_stock';",True,True,correct
+orig_zero_conv,B4A-FT-090-FRENCH,validation,B4A-FT-090,products_categories_by_status,french,"SELECT COUNT(DISTINCT products.category_id)
+FROM products
+WHERE products.status = 'out_of_stock';",True,True,correct
+orig_zero_conv,B4A-FT-090-LEBANESE_ARABIZI,validation,B4A-FT-090,products_categories_by_status,lebanese_arabizi,"SELECT c.category_id, c.name, COUNT(DISTINCT p.product_id) AS product_count
+FROM build4all_research.products p
+JOIN build4all_research.categories c ON p.category_id = c.category_id
+WHERE p.status = 'out_of_stock'
+GROUP BY c.category_id, c.name
+ORDER BY product_count DESC, c.category_id;",False,False,other
+orig_zero_conv,B4A-FT-003-ENGLISH,final_test,B4A-FT-003,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_zero_conv,B4A-FT-003-ARABIC,final_test,B4A-FT-003,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'cancelled';",True,True,correct
+orig_zero_conv,B4A-FT-003-FRENCH,final_test,B4A-FT-003,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'cancelled';",True,True,correct
+orig_zero_conv,B4A-FT-003-LEBANESE_ARABIZI,final_test,B4A-FT-003,orders_average_amount_by_status,lebanese_arabizi,"SELECT order_id
+FROM build4all_research.orders
+WHERE status = 'cancelled';",False,False,other
+orig_zero_conv,B4A-FT-008-ENGLISH,final_test,B4A-FT-008,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_zero_conv,B4A-FT-008-ARABIC,final_test,B4A-FT-008,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'completed';",True,True,correct
+orig_zero_conv,B4A-FT-008-FRENCH,final_test,B4A-FT-008,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'completed';",True,True,correct
+orig_zero_conv,B4A-FT-008-LEBANESE_ARABIZI,final_test,B4A-FT-008,orders_average_amount_by_status,lebanese_arabizi,"SELECT order_id
+FROM build4all_research.orders
+WHERE status = 'completed';",False,False,other
+orig_zero_conv,B4A-FT-013-ENGLISH,final_test,B4A-FT-013,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-013-ARABIC,final_test,B4A-FT-013,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-013-FRENCH,final_test,B4A-FT-013,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-013-LEBANESE_ARABIZI,final_test,B4A-FT-013,orders_average_amount_by_status,lebanese_arabizi,"SELECT order_id
+FROM build4all_research.orders
+WHERE status = 'pending';",False,False,other
+orig_zero_conv,B4A-FT-018-ENGLISH,final_test,B4A-FT-018,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_zero_conv,B4A-FT-018-ARABIC,final_test,B4A-FT-018,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'processing';",True,True,correct
+orig_zero_conv,B4A-FT-018-FRENCH,final_test,B4A-FT-018,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'processing';",True,True,correct
+orig_zero_conv,B4A-FT-018-LEBANESE_ARABIZI,final_test,B4A-FT-018,orders_average_amount_by_status,lebanese_arabizi,"SELECT order_id
+FROM orders
+WHERE status = 'processing';",False,False,other
+orig_zero_conv,B4A-FT-023-ENGLISH,final_test,B4A-FT-023,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-023-ARABIC,final_test,B4A-FT-023,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-023-FRENCH,final_test,B4A-FT-023,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-023-LEBANESE_ARABIZI,final_test,B4A-FT-023,orders_average_amount_by_status,lebanese_arabizi,"SELECT order_id
+FROM orders
+WHERE status = 'refunded';",False,False,other
+orig_zero_conv,B4A-FT-028-ENGLISH,final_test,B4A-FT-028,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_zero_conv,B4A-FT-028-ARABIC,final_test,B4A-FT-028,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'shipped';",True,True,correct
+orig_zero_conv,B4A-FT-028-FRENCH,final_test,B4A-FT-028,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2)
+FROM build4all_research.orders
+WHERE status = 'shipped';",True,True,correct
+orig_zero_conv,B4A-FT-028-LEBANESE_ARABIZI,final_test,B4A-FT-028,orders_average_amount_by_status,lebanese_arabizi,"SELECT order_id
+FROM orders
+WHERE status = 'shipped';",False,False,other
+orig_zero_conv,B4A-FT-034-ENGLISH,final_test,B4A-FT-034,payments_orders_by_status,english,"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'failed';",True,True,correct
+orig_zero_conv,B4A-FT-034-ARABIC,final_test,B4A-FT-034,payments_orders_by_status,arabic,"SELECT COUNT(DISTINCT payments.order_id)
+FROM payments
+WHERE payment_status = 'failed';",True,True,correct
+orig_zero_conv,B4A-FT-034-FRENCH,final_test,B4A-FT-034,payments_orders_by_status,french,"SELECT COUNT(DISTINCT o.order_id)
+FROM orders o
+JOIN payments p ON o.order_id = p.order_id
+WHERE p.payment_status = 'failed';",True,True,correct
+orig_zero_conv,B4A-FT-034-LEBANESE_ARABIZI,final_test,B4A-FT-034,payments_orders_by_status,lebanese_arabizi,"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'failed';",True,True,correct
+orig_zero_conv,B4A-FT-039-ENGLISH,final_test,B4A-FT-039,payments_orders_by_status,english,"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-039-ARABIC,final_test,B4A-FT-039,payments_orders_by_status,arabic,"SELECT COUNT(DISTINCT payments.order_id)
+FROM payments
+WHERE payments.payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-039-FRENCH,final_test,B4A-FT-039,payments_orders_by_status,french,"SELECT COUNT(DISTINCT o.order_id)
+FROM orders o
+JOIN payments p ON o.order_id = p.order_id
+WHERE p.payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-039-LEBANESE_ARABIZI,final_test,B4A-FT-039,payments_orders_by_status,lebanese_arabizi,"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'paid';",True,True,correct
+orig_zero_conv,B4A-FT-044-ENGLISH,final_test,B4A-FT-044,payments_orders_by_status,english,"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-044-ARABIC,final_test,B4A-FT-044,payments_orders_by_status,arabic,"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-044-FRENCH,final_test,B4A-FT-044,payments_orders_by_status,french,"SELECT COUNT(DISTINCT o.order_id)
+FROM orders o
+JOIN payments p ON o.order_id = p.order_id
+WHERE p.payment_status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-044-LEBANESE_ARABIZI,final_test,B4A-FT-044,payments_orders_by_status,lebanese_arabizi,"SELECT COUNT(DISTINCT order_id) AS distinct_order_count
+FROM payments
+WHERE payment_status = 'pending';",True,True,correct
+orig_zero_conv,B4A-FT-049-ENGLISH,final_test,B4A-FT-049,payments_orders_by_status,english,"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-049-ARABIC,final_test,B4A-FT-049,payments_orders_by_status,arabic,"SELECT COUNT(DISTINCT payments.order_id)
+FROM payments
+WHERE payments.payment_status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-049-FRENCH,final_test,B4A-FT-049,payments_orders_by_status,french,"SELECT COUNT(DISTINCT orders.order_id)
+FROM orders
+JOIN payments ON orders.order_id = payments.order_id
+WHERE payments.payment_status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-049-LEBANESE_ARABIZI,final_test,B4A-FT-049,payments_orders_by_status,lebanese_arabizi,"SELECT COUNT(DISTINCT order_id) AS distinct_order_count
+FROM payments
+WHERE payment_status = 'refunded';",True,True,correct
+orig_zero_conv,B4A-FT-076-ENGLISH,final_test,B4A-FT-076,products_count_by_status,english,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_zero_conv,B4A-FT-076-ARABIC,final_test,B4A-FT-076,products_count_by_status,arabic,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_zero_conv,B4A-FT-076-FRENCH,final_test,B4A-FT-076,products_count_by_status,french,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_zero_conv,B4A-FT-076-LEBANESE_ARABIZI,final_test,B4A-FT-076,products_count_by_status,lebanese_arabizi,"SELECT product_id, name
+FROM build4all_research.products
+WHERE status = 'active';",False,False,other
+orig_zero_conv,B4A-FT-081-ENGLISH,final_test,B4A-FT-081,products_count_by_status,english,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_zero_conv,B4A-FT-081-ARABIC,final_test,B4A-FT-081,products_count_by_status,arabic,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_zero_conv,B4A-FT-081-FRENCH,final_test,B4A-FT-081,products_count_by_status,french,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_zero_conv,B4A-FT-081-LEBANESE_ARABIZI,final_test,B4A-FT-081,products_count_by_status,lebanese_arabizi,"SELECT product_id, name
+FROM build4all_research.products
+WHERE status = 'discontinued';",False,False,other
+orig_zero_conv,B4A-FT-086-ENGLISH,final_test,B4A-FT-086,products_count_by_status,english,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_zero_conv,B4A-FT-086-ARABIC,final_test,B4A-FT-086,products_count_by_status,arabic,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_zero_conv,B4A-FT-086-FRENCH,final_test,B4A-FT-086,products_count_by_status,french,SELECT COUNT(*) FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_zero_conv,B4A-FT-086-LEBANESE_ARABIZI,final_test,B4A-FT-086,products_count_by_status,lebanese_arabizi,"SELECT product_id, name
+FROM build4all_research.products
+WHERE status = 'out_of_stock';",False,False,other
+orig_zero_conv,B4A-FT-091-ENGLISH,final_test,B4A-FT-091,events_count_by_type,english,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart';",True,True,correct
+orig_zero_conv,B4A-FT-091-ARABIC,final_test,B4A-FT-091,events_count_by_type,arabic,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart';",True,True,correct
+orig_zero_conv,B4A-FT-091-FRENCH,final_test,B4A-FT-091,events_count_by_type,french,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart';",True,True,correct
+orig_zero_conv,B4A-FT-091-LEBANESE_ARABIZI,final_test,B4A-FT-091,events_count_by_type,lebanese_arabizi,"SELECT event_id, product_id, event_time, customer_id
+FROM build4all_research.product_events
+WHERE event_type = 'add_to_cart';",False,False,other
+orig_zero_conv,B4A-FT-095-ENGLISH,final_test,B4A-FT-095,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-095-ARABIC,final_test,B4A-FT-095,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON products.product_id = product_events.product_id
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-095-FRENCH,final_test,B4A-FT-095,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'add_to_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-095-LEBANESE_ARABIZI,final_test,B4A-FT-095,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'add_to_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-096-ENGLISH,final_test,B4A-FT-096,events_count_by_type,english,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'purchase';",True,True,correct
+orig_zero_conv,B4A-FT-096-ARABIC,final_test,B4A-FT-096,events_count_by_type,arabic,SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'purchase';,True,True,correct
+orig_zero_conv,B4A-FT-096-FRENCH,final_test,B4A-FT-096,events_count_by_type,french,SELECT COUNT(*) FROM build4all_research.product_events WHERE event_type = 'purchase';,True,True,correct
+orig_zero_conv,B4A-FT-096-LEBANESE_ARABIZI,final_test,B4A-FT-096,events_count_by_type,lebanese_arabizi,"SELECT event_id, product_id, event_time
+FROM build4all_research.product_events
+WHERE event_type = 'purchase';",False,False,other
+orig_zero_conv,B4A-FT-100-ENGLISH,final_test,B4A-FT-100,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE event_type = 'purchase'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-100-ARABIC,final_test,B4A-FT-100,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON products.product_id = product_events.product_id
+WHERE event_type = 'purchase'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-100-FRENCH,final_test,B4A-FT-100,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'purchase'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-100-LEBANESE_ARABIZI,final_test,B4A-FT-100,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'purchase'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-101-ENGLISH,final_test,B4A-FT-101,events_count_by_type,english,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart';",True,True,correct
+orig_zero_conv,B4A-FT-101-ARABIC,final_test,B4A-FT-101,events_count_by_type,arabic,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart';",True,True,correct
+orig_zero_conv,B4A-FT-101-FRENCH,final_test,B4A-FT-101,events_count_by_type,french,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart';",True,True,correct
+orig_zero_conv,B4A-FT-101-LEBANESE_ARABIZI,final_test,B4A-FT-101,events_count_by_type,lebanese_arabizi,"SELECT event_id, product_id, event_time, customer_id
+FROM build4all_research.product_events
+WHERE event_type = 'remove_from_cart';",False,False,other
+orig_zero_conv,B4A-FT-105-ENGLISH,final_test,B4A-FT-105,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'remove_from_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-105-ARABIC,final_test,B4A-FT-105,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON products.product_id = product_events.product_id
+WHERE event_type = 'remove_from_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-105-FRENCH,final_test,B4A-FT-105,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'remove_from_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-105-LEBANESE_ARABIZI,final_test,B4A-FT-105,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'remove_from_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-106-ENGLISH,final_test,B4A-FT-106,events_count_by_type,english,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'search';",True,True,correct
+orig_zero_conv,B4A-FT-106-ARABIC,final_test,B4A-FT-106,events_count_by_type,arabic,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'search';",True,True,correct
+orig_zero_conv,B4A-FT-106-FRENCH,final_test,B4A-FT-106,events_count_by_type,french,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'search';",True,True,correct
+orig_zero_conv,B4A-FT-106-LEBANESE_ARABIZI,final_test,B4A-FT-106,events_count_by_type,lebanese_arabizi,"SELECT event_id, customer_id, product_id, event_type, event_time
+FROM build4all_research.product_events
+WHERE event_type = 'search';",False,False,other
+orig_zero_conv,B4A-FT-110-ENGLISH,final_test,B4A-FT-110,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON product_events.product_id = products.product_id
+WHERE event_type = 'search'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-110-ARABIC,final_test,B4A-FT-110,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON products.product_id = product_events.product_id
+WHERE event_type = 'search'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-110-FRENCH,final_test,B4A-FT-110,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'search'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-110-LEBANESE_ARABIZI,final_test,B4A-FT-110,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'search'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-111-ENGLISH,final_test,B4A-FT-111,events_count_by_type,english,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'view';",True,True,correct
+orig_zero_conv,B4A-FT-111-ARABIC,final_test,B4A-FT-111,events_count_by_type,arabic,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'view';",True,True,correct
+orig_zero_conv,B4A-FT-111-FRENCH,final_test,B4A-FT-111,events_count_by_type,french,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'view';",True,True,correct
+orig_zero_conv,B4A-FT-111-LEBANESE_ARABIZI,final_test,B4A-FT-111,events_count_by_type,lebanese_arabizi,"SELECT event_id, product_id, event_time, customer_id, event_type
+FROM build4all_research.product_events
+WHERE event_type = 'view';",False,False,other
+orig_zero_conv,B4A-FT-115-ENGLISH,final_test,B4A-FT-115,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE event_type = 'view'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-115-ARABIC,final_test,B4A-FT-115,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON products.product_id = product_events.product_id
+WHERE event_type = 'view'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-115-FRENCH,final_test,B4A-FT-115,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE event_type = 'view'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-115-LEBANESE_ARABIZI,final_test,B4A-FT-115,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'view'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-116-ENGLISH,final_test,B4A-FT-116,events_count_by_type,english,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist';",True,True,correct
+orig_zero_conv,B4A-FT-116-ARABIC,final_test,B4A-FT-116,events_count_by_type,arabic,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist';",True,True,correct
+orig_zero_conv,B4A-FT-116-FRENCH,final_test,B4A-FT-116,events_count_by_type,french,"SELECT COUNT(*) AS event_count
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist';",True,True,correct
+orig_zero_conv,B4A-FT-116-LEBANESE_ARABIZI,final_test,B4A-FT-116,events_count_by_type,lebanese_arabizi,"SELECT event_id, product_id, event_time, customer_id
+FROM build4all_research.product_events
+WHERE event_type = 'wishlist';",False,False,other
+orig_zero_conv,B4A-FT-120-ENGLISH,final_test,B4A-FT-120,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'wishlist'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-120-ARABIC,final_test,B4A-FT-120,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON products.product_id = product_events.product_id
+WHERE event_type = 'wishlist'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-120-FRENCH,final_test,B4A-FT-120,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'wishlist'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_zero_conv,B4A-FT-120-LEBANESE_ARABIZI,final_test,B4A-FT-120,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.products
+JOIN build4all_research.product_events ON build4all_research.products.product_id = build4all_research.product_events.product_id
+WHERE build4all_research.product_events.event_type = 'wishlist'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-005-ENGLISH,validation,B4A-FT-005,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_few_conv,B4A-FT-005-ARABIC,validation,B4A-FT-005,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_few_conv,B4A-FT-005-FRENCH,validation,B4A-FT-005,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_few_conv,B4A-FT-005-LEBANESE_ARABIZI,validation,B4A-FT-005,orders_average_tax_by_status,lebanese_arabizi,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_few_conv,B4A-FT-010-ENGLISH,validation,B4A-FT-010,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_few_conv,B4A-FT-010-ARABIC,validation,B4A-FT-010,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_few_conv,B4A-FT-010-FRENCH,validation,B4A-FT-010,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_few_conv,B4A-FT-010-LEBANESE_ARABIZI,validation,B4A-FT-010,orders_average_tax_by_status,lebanese_arabizi,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_few_conv,B4A-FT-015-ENGLISH,validation,B4A-FT-015,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_few_conv,B4A-FT-015-ARABIC,validation,B4A-FT-015,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_few_conv,B4A-FT-015-FRENCH,validation,B4A-FT-015,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_few_conv,B4A-FT-015-LEBANESE_ARABIZI,validation,B4A-FT-015,orders_average_tax_by_status,lebanese_arabizi,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_few_conv,B4A-FT-020-ENGLISH,validation,B4A-FT-020,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_few_conv,B4A-FT-020-ARABIC,validation,B4A-FT-020,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_few_conv,B4A-FT-020-FRENCH,validation,B4A-FT-020,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_few_conv,B4A-FT-020-LEBANESE_ARABIZI,validation,B4A-FT-020,orders_average_tax_by_status,lebanese_arabizi,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_few_conv,B4A-FT-025-ENGLISH,validation,B4A-FT-025,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-025-ARABIC,validation,B4A-FT-025,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-025-FRENCH,validation,B4A-FT-025,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-025-LEBANESE_ARABIZI,validation,B4A-FT-025,orders_average_tax_by_status,lebanese_arabizi,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-030-ENGLISH,validation,B4A-FT-030,orders_average_tax_by_status,english,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_few_conv,B4A-FT-030-ARABIC,validation,B4A-FT-030,orders_average_tax_by_status,arabic,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_few_conv,B4A-FT-030-FRENCH,validation,B4A-FT-030,orders_average_tax_by_status,french,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_few_conv,B4A-FT-030-LEBANESE_ARABIZI,validation,B4A-FT-030,orders_average_tax_by_status,lebanese_arabizi,"SELECT ROUND(AVG(tax_amount), 2) AS average_tax_amount FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_few_conv,B4A-FT-051-ENGLISH,validation,B4A-FT-051,payment_method_count,english,SELECT COUNT(*) AS bank_transfer_payment_count FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,True,True,correct
+orig_few_conv,B4A-FT-051-ARABIC,validation,B4A-FT-051,payment_method_count,arabic,SELECT COUNT(*) AS total_payments_bank_transfer FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,True,True,correct
+orig_few_conv,B4A-FT-051-FRENCH,validation,B4A-FT-051,payment_method_count,french,SELECT COUNT(*) AS total_payments_count FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,True,True,correct
+orig_few_conv,B4A-FT-051-LEBANESE_ARABIZI,validation,B4A-FT-051,payment_method_count,lebanese_arabizi,SELECT COUNT(*) AS bank_transfer_payment_count FROM build4all_research.payments WHERE payment_method = 'bank_transfer';,True,True,correct
+orig_few_conv,B4A-FT-055-ENGLISH,validation,B4A-FT-055,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-055-ARABIC,validation,B4A-FT-055,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-055-FRENCH,validation,B4A-FT-055,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-055-LEBANESE_ARABIZI,validation,B4A-FT-055,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'bank_transfer' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-056-ENGLISH,validation,B4A-FT-056,payment_method_count,english,SELECT COUNT(*) AS cash_on_delivery_payment_count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,True,True,correct
+orig_few_conv,B4A-FT-056-ARABIC,validation,B4A-FT-056,payment_method_count,arabic,SELECT COUNT(*) AS total_payments_count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,True,True,correct
+orig_few_conv,B4A-FT-056-FRENCH,validation,B4A-FT-056,payment_method_count,french,SELECT COUNT(*) AS total_payments_count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,True,True,correct
+orig_few_conv,B4A-FT-056-LEBANESE_ARABIZI,validation,B4A-FT-056,payment_method_count,lebanese_arabizi,SELECT COUNT(*) AS cash_on_delivery_payment_count FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery';,True,True,correct
+orig_few_conv,B4A-FT-060-ENGLISH,validation,B4A-FT-060,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-060-ARABIC,validation,B4A-FT-060,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-060-FRENCH,validation,B4A-FT-060,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-060-LEBANESE_ARABIZI,validation,B4A-FT-060,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'cash_on_delivery' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-061-ENGLISH,validation,B4A-FT-061,payment_method_count,english,SELECT COUNT(*) AS credit_card_payment_count FROM build4all_research.payments WHERE payment_method = 'credit_card';,True,True,correct
+orig_few_conv,B4A-FT-061-ARABIC,validation,B4A-FT-061,payment_method_count,arabic,SELECT COUNT(*) AS total_payments_count FROM build4all_research.payments WHERE payment_method = 'credit_card';,True,True,correct
+orig_few_conv,B4A-FT-061-FRENCH,validation,B4A-FT-061,payment_method_count,french,SELECT COUNT(*) AS total_payments_count FROM build4all_research.payments WHERE payment_method = 'credit_card';,True,True,correct
+orig_few_conv,B4A-FT-061-LEBANESE_ARABIZI,validation,B4A-FT-061,payment_method_count,lebanese_arabizi,SELECT COUNT(*) AS credit_card_payment_count FROM build4all_research.payments WHERE payment_method = 'credit_card';,True,True,correct
+orig_few_conv,B4A-FT-065-ENGLISH,validation,B4A-FT-065,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-065-ARABIC,validation,B4A-FT-065,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-065-FRENCH,validation,B4A-FT-065,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-065-LEBANESE_ARABIZI,validation,B4A-FT-065,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'credit_card' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-066-ENGLISH,validation,B4A-FT-066,payment_method_count,english,SELECT COUNT(*) AS debit_card_payment_count FROM build4all_research.payments WHERE payment_method = 'debit_card';,True,True,correct
+orig_few_conv,B4A-FT-066-ARABIC,validation,B4A-FT-066,payment_method_count,arabic,SELECT COUNT(*) AS total_payments_count FROM build4all_research.payments WHERE payment_method = 'debit_card';,True,True,correct
+orig_few_conv,B4A-FT-066-FRENCH,validation,B4A-FT-066,payment_method_count,french,SELECT COUNT(*) AS total_payments_count FROM build4all_research.payments WHERE payment_method = 'debit_card';,True,True,correct
+orig_few_conv,B4A-FT-066-LEBANESE_ARABIZI,validation,B4A-FT-066,payment_method_count,lebanese_arabizi,SELECT COUNT(*) AS total_payments_count FROM build4all_research.payments WHERE payment_method = 'debit_card';,True,True,correct
+orig_few_conv,B4A-FT-070-ENGLISH,validation,B4A-FT-070,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-070-ARABIC,validation,B4A-FT-070,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-070-FRENCH,validation,B4A-FT-070,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-070-LEBANESE_ARABIZI,validation,B4A-FT-070,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'debit_card' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-071-ENGLISH,validation,B4A-FT-071,payment_method_count,english,SELECT COUNT(*) AS digital_wallet_payment_count FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,True,True,correct
+orig_few_conv,B4A-FT-071-ARABIC,validation,B4A-FT-071,payment_method_count,arabic,SELECT COUNT(*) AS digital_wallet_payment_count FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,True,True,correct
+orig_few_conv,B4A-FT-071-FRENCH,validation,B4A-FT-071,payment_method_count,french,SELECT COUNT(*) AS total_payments FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,True,True,correct
+orig_few_conv,B4A-FT-071-LEBANESE_ARABIZI,validation,B4A-FT-071,payment_method_count,lebanese_arabizi,SELECT COUNT(*) AS digital_wallet_payment_count FROM build4all_research.payments WHERE payment_method = 'digital_wallet';,True,True,correct
+orig_few_conv,B4A-FT-075-ENGLISH,validation,B4A-FT-075,payment_method_paid_total,english,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-075-ARABIC,validation,B4A-FT-075,payment_method_paid_total,arabic,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-075-FRENCH,validation,B4A-FT-075,payment_method_paid_total,french,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-075-LEBANESE_ARABIZI,validation,B4A-FT-075,payment_method_paid_total,lebanese_arabizi,"SELECT ROUND(SUM(paid_amount), 2) AS total_paid_amount FROM build4all_research.payments WHERE payment_method = 'digital_wallet' AND payment_status = 'paid';",True,True,correct
+orig_few_conv,B4A-FT-077-ENGLISH,validation,B4A-FT-077,products_average_price_by_status,english,"SELECT ROUND(AVG(price), 2) AS average_list_price FROM build4all_research.products WHERE status = 'active';",True,True,correct
+orig_few_conv,B4A-FT-077-ARABIC,validation,B4A-FT-077,products_average_price_by_status,arabic,"SELECT ROUND(AVG(price), 2) AS average_list_price FROM build4all_research.products WHERE status = 'active';",True,True,correct
+orig_few_conv,B4A-FT-077-FRENCH,validation,B4A-FT-077,products_average_price_by_status,french,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'active';",True,True,correct
+orig_few_conv,B4A-FT-077-LEBANESE_ARABIZI,validation,B4A-FT-077,products_average_price_by_status,lebanese_arabizi,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'active';",True,True,correct
+orig_few_conv,B4A-FT-079-ENGLISH,validation,B4A-FT-079,products_inventory_value_by_status,english,"SELECT ROUND(SUM(CASE WHEN sale_price IS NOT NULL THEN sale_price ELSE price END * stock), 2) AS inventory_value FROM build4all_research.products WHERE status = 'active';",True,True,correct
+orig_few_conv,B4A-FT-079-ARABIC,validation,B4A-FT-079,products_inventory_value_by_status,arabic,SELECT SUM(CASE WHEN products.sale_price IS NOT NULL THEN products.sale_price * products.stock ELSE products.price * products.stock END) AS total_stock_value FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-079-FRENCH,validation,B4A-FT-079,products_inventory_value_by_status,french,SELECT SUM(CASE WHEN sale_price IS NOT NULL THEN sale_price * stock ELSE price * stock END) AS total_stock_value FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-079-LEBANESE_ARABIZI,validation,B4A-FT-079,products_inventory_value_by_status,lebanese_arabizi,SELECT SUM(sale_price) AS total_sale_price FROM build4all_research.products WHERE status = 'active' AND sale_price IS NOT NULL;,False,False,other
+orig_few_conv,B4A-FT-080-ENGLISH,validation,B4A-FT-080,products_categories_by_status,english,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-080-ARABIC,validation,B4A-FT-080,products_categories_by_status,arabic,SELECT COUNT(DISTINCT category_id) AS distinct_category_count FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-080-FRENCH,validation,B4A-FT-080,products_categories_by_status,french,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-080-LEBANESE_ARABIZI,validation,B4A-FT-080,products_categories_by_status,lebanese_arabizi,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-082-ENGLISH,validation,B4A-FT-082,products_average_price_by_status,english,"SELECT ROUND(AVG(price), 2) AS average_list_price FROM build4all_research.products WHERE status = 'discontinued';",True,True,correct
+orig_few_conv,B4A-FT-082-ARABIC,validation,B4A-FT-082,products_average_price_by_status,arabic,"SELECT ROUND(AVG(price), 2) AS average_list_price FROM build4all_research.products WHERE status = 'discontinued';",True,True,correct
+orig_few_conv,B4A-FT-082-FRENCH,validation,B4A-FT-082,products_average_price_by_status,french,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'discontinued';",True,True,correct
+orig_few_conv,B4A-FT-082-LEBANESE_ARABIZI,validation,B4A-FT-082,products_average_price_by_status,lebanese_arabizi,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'discontinued';",True,True,correct
+orig_few_conv,B4A-FT-084-ENGLISH,validation,B4A-FT-084,products_inventory_value_by_status,english,"SELECT ROUND(SUM(CASE WHEN sale_price IS NOT NULL THEN sale_price ELSE price END * stock), 2) AS inventory_value FROM build4all_research.products WHERE status = 'discontinued';",True,True,correct
+orig_few_conv,B4A-FT-084-ARABIC,validation,B4A-FT-084,products_inventory_value_by_status,arabic,SELECT SUM(CASE WHEN sale_price IS NOT NULL THEN sale_price ELSE price END * stock) AS total_stock_value FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-084-FRENCH,validation,B4A-FT-084,products_inventory_value_by_status,french,SELECT SUM(CASE WHEN sale_price IS NOT NULL THEN sale_price * stock ELSE price * stock END) AS total_stock_value FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-084-LEBANESE_ARABIZI,validation,B4A-FT-084,products_inventory_value_by_status,lebanese_arabizi,SELECT SUM(sale_price) AS total_sale_price FROM build4all_research.products WHERE status = 'discontinued' AND sale_price IS NOT NULL;,False,False,other
+orig_few_conv,B4A-FT-085-ENGLISH,validation,B4A-FT-085,products_categories_by_status,english,SELECT COUNT(DISTINCT category_id) AS represented_categories FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-085-ARABIC,validation,B4A-FT-085,products_categories_by_status,arabic,SELECT COUNT(DISTINCT category_id) AS distinct_category_count FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-085-FRENCH,validation,B4A-FT-085,products_categories_by_status,french,SELECT COUNT(DISTINCT category_id) AS distinct_category_count FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-085-LEBANESE_ARABIZI,validation,B4A-FT-085,products_categories_by_status,lebanese_arabizi,SELECT COUNT(DISTINCT category_id) AS category_count FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-087-ENGLISH,validation,B4A-FT-087,products_average_price_by_status,english,"SELECT ROUND(AVG(price), 2) AS average_list_price FROM build4all_research.products WHERE status = 'out_of_stock';",True,True,correct
+orig_few_conv,B4A-FT-087-ARABIC,validation,B4A-FT-087,products_average_price_by_status,arabic,"SELECT ROUND(AVG(price), 2) AS average_list_price FROM build4all_research.products WHERE status = 'out_of_stock';",True,True,correct
+orig_few_conv,B4A-FT-087-FRENCH,validation,B4A-FT-087,products_average_price_by_status,french,"SELECT ROUND(AVG(price), 2) AS average_catalog_price FROM build4all_research.products WHERE status = 'out_of_stock';",True,True,correct
+orig_few_conv,B4A-FT-087-LEBANESE_ARABIZI,validation,B4A-FT-087,products_average_price_by_status,lebanese_arabizi,"SELECT ROUND(AVG(price), 2) AS average_price FROM build4all_research.products WHERE status = 'out_of_stock';",True,True,correct
+orig_few_conv,B4A-FT-089-ENGLISH,validation,B4A-FT-089,products_inventory_value_by_status,english,"SELECT ROUND(SUM(CASE WHEN sale_price IS NOT NULL THEN sale_price ELSE price END * stock), 2) AS inventory_value FROM build4all_research.products WHERE status = 'out_of_stock';",True,True,correct
+orig_few_conv,B4A-FT-089-ARABIC,validation,B4A-FT-089,products_inventory_value_by_status,arabic,SELECT SUM(CASE WHEN products.sale_price IS NOT NULL THEN products.sale_price * products.stock ELSE products.price * products.stock END) AS total_stock_value FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-089-FRENCH,validation,B4A-FT-089,products_inventory_value_by_status,french,SELECT SUM(CASE WHEN sale_price IS NOT NULL THEN sale_price * stock ELSE price * stock END) AS total_stock_value FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-089-LEBANESE_ARABIZI,validation,B4A-FT-089,products_inventory_value_by_status,lebanese_arabizi,SELECT SUM(sale_price) AS total_sale_price FROM build4all_research.products WHERE status = 'out_of_stock';,False,False,other
+orig_few_conv,B4A-FT-090-ENGLISH,validation,B4A-FT-090,products_categories_by_status,english,SELECT COUNT(DISTINCT category_id) AS represented_categories FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-090-ARABIC,validation,B4A-FT-090,products_categories_by_status,arabic,SELECT COUNT(DISTINCT category_id) AS distinct_category_count FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-090-FRENCH,validation,B4A-FT-090,products_categories_by_status,french,SELECT COUNT(DISTINCT category_id) AS distinct_category_count FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-090-LEBANESE_ARABIZI,validation,B4A-FT-090,products_categories_by_status,lebanese_arabizi,SELECT COUNT(DISTINCT products.category_id) AS category_count FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-003-ENGLISH,final_test,B4A-FT-003,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_few_conv,B4A-FT-003-ARABIC,final_test,B4A-FT-003,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_few_conv,B4A-FT-003-FRENCH,final_test,B4A-FT-003,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_few_conv,B4A-FT-003-LEBANESE_ARABIZI,final_test,B4A-FT-003,orders_average_amount_by_status,lebanese_arabizi,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'cancelled';",True,True,correct
+orig_few_conv,B4A-FT-008-ENGLISH,final_test,B4A-FT-008,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_few_conv,B4A-FT-008-ARABIC,final_test,B4A-FT-008,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2) AS average_order_value FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_few_conv,B4A-FT-008-FRENCH,final_test,B4A-FT-008,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_few_conv,B4A-FT-008-LEBANESE_ARABIZI,final_test,B4A-FT-008,orders_average_amount_by_status,lebanese_arabizi,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'completed';",True,True,correct
+orig_few_conv,B4A-FT-013-ENGLISH,final_test,B4A-FT-013,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_few_conv,B4A-FT-013-ARABIC,final_test,B4A-FT-013,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_few_conv,B4A-FT-013-FRENCH,final_test,B4A-FT-013,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_few_conv,B4A-FT-013-LEBANESE_ARABIZI,final_test,B4A-FT-013,orders_average_amount_by_status,lebanese_arabizi,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'pending';",True,True,correct
+orig_few_conv,B4A-FT-018-ENGLISH,final_test,B4A-FT-018,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_few_conv,B4A-FT-018-ARABIC,final_test,B4A-FT-018,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2) AS average_order_value FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_few_conv,B4A-FT-018-FRENCH,final_test,B4A-FT-018,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_few_conv,B4A-FT-018-LEBANESE_ARABIZI,final_test,B4A-FT-018,orders_average_amount_by_status,lebanese_arabizi,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'processing';",True,True,correct
+orig_few_conv,B4A-FT-023-ENGLISH,final_test,B4A-FT-023,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-023-ARABIC,final_test,B4A-FT-023,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-023-FRENCH,final_test,B4A-FT-023,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-023-LEBANESE_ARABIZI,final_test,B4A-FT-023,orders_average_amount_by_status,lebanese_arabizi,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-028-ENGLISH,final_test,B4A-FT-028,orders_average_amount_by_status,english,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_few_conv,B4A-FT-028-ARABIC,final_test,B4A-FT-028,orders_average_amount_by_status,arabic,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_few_conv,B4A-FT-028-FRENCH,final_test,B4A-FT-028,orders_average_amount_by_status,french,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_few_conv,B4A-FT-028-LEBANESE_ARABIZI,final_test,B4A-FT-028,orders_average_amount_by_status,lebanese_arabizi,"SELECT ROUND(AVG(total_amount), 2) AS average_order_amount FROM build4all_research.orders WHERE status = 'shipped';",True,True,correct
+orig_few_conv,B4A-FT-034-ENGLISH,final_test,B4A-FT-034,payments_orders_by_status,english,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'failed';,True,True,correct
+orig_few_conv,B4A-FT-034-ARABIC,final_test,B4A-FT-034,payments_orders_by_status,arabic,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'failed';,True,True,correct
+orig_few_conv,B4A-FT-034-FRENCH,final_test,B4A-FT-034,payments_orders_by_status,french,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'failed';,True,True,correct
+orig_few_conv,B4A-FT-034-LEBANESE_ARABIZI,final_test,B4A-FT-034,payments_orders_by_status,lebanese_arabizi,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'failed';,True,True,correct
+orig_few_conv,B4A-FT-039-ENGLISH,final_test,B4A-FT-039,payments_orders_by_status,english,SELECT COUNT(DISTINCT order_id) AS distinct_paid_orders_count FROM build4all_research.payments WHERE payment_status = 'paid';,True,True,correct
+orig_few_conv,B4A-FT-039-ARABIC,final_test,B4A-FT-039,payments_orders_by_status,arabic,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'paid';,True,True,correct
+orig_few_conv,B4A-FT-039-FRENCH,final_test,B4A-FT-039,payments_orders_by_status,french,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'paid';,True,True,correct
+orig_few_conv,B4A-FT-039-LEBANESE_ARABIZI,final_test,B4A-FT-039,payments_orders_by_status,lebanese_arabizi,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'paid';,True,True,correct
+orig_few_conv,B4A-FT-044-ENGLISH,final_test,B4A-FT-044,payments_orders_by_status,english,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'pending';,True,True,correct
+orig_few_conv,B4A-FT-044-ARABIC,final_test,B4A-FT-044,payments_orders_by_status,arabic,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'pending';,True,True,correct
+orig_few_conv,B4A-FT-044-FRENCH,final_test,B4A-FT-044,payments_orders_by_status,french,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'pending';,True,True,correct
+orig_few_conv,B4A-FT-044-LEBANESE_ARABIZI,final_test,B4A-FT-044,payments_orders_by_status,lebanese_arabizi,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'pending';,True,True,correct
+orig_few_conv,B4A-FT-049-ENGLISH,final_test,B4A-FT-049,payments_orders_by_status,english,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'refunded';,True,True,correct
+orig_few_conv,B4A-FT-049-ARABIC,final_test,B4A-FT-049,payments_orders_by_status,arabic,"SELECT COUNT(DISTINCT orders.order_id) AS distinct_order_count 
+FROM build4all_research.orders 
+JOIN build4all_research.payments ON orders.order_id = payments.order_id 
+WHERE payments.payment_status = 'refunded';",True,True,correct
+orig_few_conv,B4A-FT-049-FRENCH,final_test,B4A-FT-049,payments_orders_by_status,french,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'refunded';,True,True,correct
+orig_few_conv,B4A-FT-049-LEBANESE_ARABIZI,final_test,B4A-FT-049,payments_orders_by_status,lebanese_arabizi,SELECT COUNT(DISTINCT order_id) AS distinct_order_count FROM build4all_research.payments WHERE payment_status = 'refunded';,True,True,correct
+orig_few_conv,B4A-FT-076-ENGLISH,final_test,B4A-FT-076,products_count_by_status,english,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-076-ARABIC,final_test,B4A-FT-076,products_count_by_status,arabic,SELECT COUNT(*) AS active_product_count FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-076-FRENCH,final_test,B4A-FT-076,products_count_by_status,french,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-076-LEBANESE_ARABIZI,final_test,B4A-FT-076,products_count_by_status,lebanese_arabizi,SELECT COUNT(*) AS active_product_count FROM build4all_research.products WHERE status = 'active';,True,True,correct
+orig_few_conv,B4A-FT-081-ENGLISH,final_test,B4A-FT-081,products_count_by_status,english,SELECT COUNT(*) AS number_of_products FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-081-ARABIC,final_test,B4A-FT-081,products_count_by_status,arabic,SELECT COUNT(*) AS total_products FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-081-FRENCH,final_test,B4A-FT-081,products_count_by_status,french,SELECT COUNT(*) AS total_products FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-081-LEBANESE_ARABIZI,final_test,B4A-FT-081,products_count_by_status,lebanese_arabizi,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'discontinued';,True,True,correct
+orig_few_conv,B4A-FT-086-ENGLISH,final_test,B4A-FT-086,products_count_by_status,english,SELECT COUNT(*) AS product_count FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-086-ARABIC,final_test,B4A-FT-086,products_count_by_status,arabic,SELECT COUNT(*) AS total_products FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-086-FRENCH,final_test,B4A-FT-086,products_count_by_status,french,SELECT COUNT(*) AS total_products FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-086-LEBANESE_ARABIZI,final_test,B4A-FT-086,products_count_by_status,lebanese_arabizi,SELECT COUNT(*) AS total_products FROM build4all_research.products WHERE status = 'out_of_stock';,True,True,correct
+orig_few_conv,B4A-FT-091-ENGLISH,final_test,B4A-FT-091,events_count_by_type,english,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,True,True,correct
+orig_few_conv,B4A-FT-091-ARABIC,final_test,B4A-FT-091,events_count_by_type,arabic,SELECT COUNT(*) AS add_to_cart_event_count FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,True,True,correct
+orig_few_conv,B4A-FT-091-FRENCH,final_test,B4A-FT-091,events_count_by_type,french,SELECT COUNT(*) AS add_to_cart_event_count FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,True,True,correct
+orig_few_conv,B4A-FT-091-LEBANESE_ARABIZI,final_test,B4A-FT-091,events_count_by_type,lebanese_arabizi,SELECT COUNT(*) AS add_to_cart_event_count FROM build4all_research.product_events WHERE event_type = 'add_to_cart';,True,True,correct
+orig_few_conv,B4A-FT-095-ENGLISH,final_test,B4A-FT-095,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON product_events.product_id = products.product_id
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-095-ARABIC,final_test,B4A-FT-095,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON product_events.product_id = products.product_id
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-095-FRENCH,final_test,B4A-FT-095,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON product_events.product_id = products.product_id
+WHERE event_type = 'add_to_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-095-LEBANESE_ARABIZI,final_test,B4A-FT-095,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'add_to_cart' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-096-ENGLISH,final_test,B4A-FT-096,events_count_by_type,english,SELECT COUNT(*) AS total_purchase_events FROM build4all_research.product_events WHERE event_type = 'purchase';,True,True,correct
+orig_few_conv,B4A-FT-096-ARABIC,final_test,B4A-FT-096,events_count_by_type,arabic,SELECT COUNT(*) AS total_purchase_events FROM build4all_research.product_events WHERE event_type = 'purchase';,True,True,correct
+orig_few_conv,B4A-FT-096-FRENCH,final_test,B4A-FT-096,events_count_by_type,french,SELECT COUNT(*) AS purchase_event_count FROM build4all_research.product_events WHERE event_type = 'purchase';,True,True,correct
+orig_few_conv,B4A-FT-096-LEBANESE_ARABIZI,final_test,B4A-FT-096,events_count_by_type,lebanese_arabizi,SELECT COUNT(*) AS total_purchase_events FROM build4all_research.product_events WHERE event_type = 'purchase';,True,True,correct
+orig_few_conv,B4A-FT-100-ENGLISH,final_test,B4A-FT-100,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'purchase' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-100-ARABIC,final_test,B4A-FT-100,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'purchase' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-100-FRENCH,final_test,B4A-FT-100,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON product_events.product_id = products.product_id
+WHERE event_type = 'purchase'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-100-LEBANESE_ARABIZI,final_test,B4A-FT-100,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON product_events.product_id = products.product_id
+WHERE event_type = 'purchase'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id;",False,False,not_executed
+orig_few_conv,B4A-FT-101-ENGLISH,final_test,B4A-FT-101,events_count_by_type,english,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,True,True,correct
+orig_few_conv,B4A-FT-101-ARABIC,final_test,B4A-FT-101,events_count_by_type,arabic,SELECT COUNT(*) AS total_event_count FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,True,True,correct
+orig_few_conv,B4A-FT-101-FRENCH,final_test,B4A-FT-101,events_count_by_type,french,SELECT COUNT(*) AS remove_from_cart_event_count FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,True,True,correct
+orig_few_conv,B4A-FT-101-LEBANESE_ARABIZI,final_test,B4A-FT-101,events_count_by_type,lebanese_arabizi,SELECT COUNT(*) AS remove_from_cart_event_count FROM build4all_research.product_events WHERE event_type = 'remove_from_cart';,True,True,correct
+orig_few_conv,B4A-FT-105-ENGLISH,final_test,B4A-FT-105,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON product_events.product_id = products.product_id
+WHERE event_type = 'remove_from_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-105-ARABIC,final_test,B4A-FT-105,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'remove_from_cart' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-105-FRENCH,final_test,B4A-FT-105,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON product_events.product_id = products.product_id
+WHERE event_type = 'remove_from_cart'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-105-LEBANESE_ARABIZI,final_test,B4A-FT-105,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'remove_from_cart' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id;",False,False,not_executed
+orig_few_conv,B4A-FT-106-ENGLISH,final_test,B4A-FT-106,events_count_by_type,english,SELECT COUNT(*) AS search_event_count FROM build4all_research.product_events WHERE event_type = 'search';,True,True,correct
+orig_few_conv,B4A-FT-106-ARABIC,final_test,B4A-FT-106,events_count_by_type,arabic,SELECT COUNT(*) AS total_search_events FROM build4all_research.product_events WHERE event_type = 'search';,True,True,correct
+orig_few_conv,B4A-FT-106-FRENCH,final_test,B4A-FT-106,events_count_by_type,french,SELECT COUNT(*) AS total_search_events FROM build4all_research.product_events WHERE event_type = 'search';,True,True,correct
+orig_few_conv,B4A-FT-106-LEBANESE_ARABIZI,final_test,B4A-FT-106,events_count_by_type,lebanese_arabizi,SELECT COUNT(*) AS total_search_events FROM build4all_research.product_events WHERE event_type = 'search';,True,True,correct
+orig_few_conv,B4A-FT-110-ENGLISH,final_test,B4A-FT-110,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON build4all_research.product_events.product_id = build4all_research.products.product_id 
+WHERE event_type = 'search' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-110-ARABIC,final_test,B4A-FT-110,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'search' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-110-FRENCH,final_test,B4A-FT-110,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count
+FROM build4all_research.product_events
+JOIN build4all_research.products ON build4all_research.product_events.product_id = build4all_research.products.product_id
+WHERE event_type = 'search'
+GROUP BY product_id, name
+ORDER BY event_count DESC, product_id
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-110-LEBANESE_ARABIZI,final_test,B4A-FT-110,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON build4all_research.product_events.product_id = build4all_research.products.product_id 
+WHERE event_type = 'search' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id;",False,False,not_executed
+orig_few_conv,B4A-FT-111-ENGLISH,final_test,B4A-FT-111,events_count_by_type,english,SELECT COUNT(*) AS event_count FROM build4all_research.product_events WHERE event_type = 'view';,True,True,correct
+orig_few_conv,B4A-FT-111-ARABIC,final_test,B4A-FT-111,events_count_by_type,arabic,SELECT COUNT(*) AS total_view_events FROM build4all_research.product_events WHERE event_type = 'view';,True,True,correct
+orig_few_conv,B4A-FT-111-FRENCH,final_test,B4A-FT-111,events_count_by_type,french,SELECT COUNT(*) AS view_event_count FROM build4all_research.product_events WHERE event_type = 'view';,True,True,correct
+orig_few_conv,B4A-FT-111-LEBANESE_ARABIZI,final_test,B4A-FT-111,events_count_by_type,lebanese_arabizi,SELECT COUNT(*) AS total_view_events FROM build4all_research.product_events WHERE event_type = 'view';,True,True,correct
+orig_few_conv,B4A-FT-115-ENGLISH,final_test,B4A-FT-115,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'view' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-115-ARABIC,final_test,B4A-FT-115,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'view' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-115-FRENCH,final_test,B4A-FT-115,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON build4all_research.product_events.product_id = build4all_research.products.product_id 
+WHERE event_type = 'view' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-115-LEBANESE_ARABIZI,final_test,B4A-FT-115,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'view' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-116-ENGLISH,final_test,B4A-FT-116,events_count_by_type,english,SELECT COUNT(*) AS wishlist_event_count FROM build4all_research.product_events WHERE event_type = 'wishlist';,True,True,correct
+orig_few_conv,B4A-FT-116-ARABIC,final_test,B4A-FT-116,events_count_by_type,arabic,SELECT COUNT(*) AS total_wishlist_events FROM build4all_research.product_events WHERE event_type = 'wishlist';,True,True,correct
+orig_few_conv,B4A-FT-116-FRENCH,final_test,B4A-FT-116,events_count_by_type,french,SELECT COUNT(*) AS total_wishlist_events FROM build4all_research.product_events WHERE event_type = 'wishlist';,True,True,correct
+orig_few_conv,B4A-FT-116-LEBANESE_ARABIZI,final_test,B4A-FT-116,events_count_by_type,lebanese_arabizi,SELECT COUNT(*) AS total_wishlist_events FROM build4all_research.product_events WHERE event_type = 'wishlist';,True,True,correct
+orig_few_conv,B4A-FT-120-ENGLISH,final_test,B4A-FT-120,events_top_products_by_type,english,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'wishlist' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-120-ARABIC,final_test,B4A-FT-120,events_top_products_by_type,arabic,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'wishlist' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-120-FRENCH,final_test,B4A-FT-120,events_top_products_by_type,french,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'wishlist' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed
+orig_few_conv,B4A-FT-120-LEBANESE_ARABIZI,final_test,B4A-FT-120,events_top_products_by_type,lebanese_arabizi,"SELECT product_id, name, COUNT(*) AS event_count 
+FROM build4all_research.product_events 
+JOIN build4all_research.products ON product_events.product_id = products.product_id 
+WHERE event_type = 'wishlist' 
+GROUP BY product_id, name 
+ORDER BY event_count DESC, product_id 
+LIMIT 5;",False,False,not_executed

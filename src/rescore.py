@@ -37,6 +37,8 @@ SYSTEMS = {
     "orig_rag": [("B4_original_rag.csv", "sql")],
     "coder_zero": [("B6_qwen25coder7b_zeroshot.csv", "sql")],
     "coder_few": [("B6_qwen25coder7b_fewshot3.csv", "sql")],
+    "orig_zero_conv": [("E1_original_zeroshot_conventions.csv", "sql")],
+    "orig_few_conv": [("E2_original_fewshot3_conventions.csv", "sql")],
 }
 
 

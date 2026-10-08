@@ -13,11 +13,16 @@ The study evaluates QLoRA fine-tuning of Qwen3-8B, retrieval of business-policy 
 held-out set). *Strict* is the original execution-accuracy metric. *Tolerant* also rounds numbers to two decimals and
 accepts an extra or missing column. The gold queries follow two conventions that no question states (rounding to two
 decimals, and a product-name column in "top products" queries), and most strict differences come from them.
+With the conventions stated in the prompt, few-shot prompting beats the fine-tuned model on validation; its 24
+locked-test failures are all one SQL error (an ambiguous `product_id` in the top-products join). The robust gain of
+fine-tuning is over zero-shot prompting, above all in Lebanese Arabizi (48/50 vs 14–27/50).
 
 | System | Validation strict | Validation tolerant | Locked test strict | Locked test tolerant |
 |---|---|---|---|---|
 | Qwen3-8B zero-shot | 46 | 73 | 56 | 94 |
 | Qwen3-8B few-shot (3 retrieved examples) | 85 | 94 | 76 | 100 |
+| Qwen3-8B zero-shot, conventions stated in prompt | 77 | 77 | 61 | 61 |
+| Qwen3-8B few-shot, conventions stated in prompt | 97 | 97 | 76 | 76 |
 | Qwen2.5-Coder-7B few-shot | 58 | 84 | 74 | 95 |
 | Qwen3-8B + QLoRA | 92 | 92 | 94 | 100 |
 | Qwen3-8B + QLoRA + RAG | 87 | 87 | 97 | 100 |
@@ -52,7 +57,7 @@ results/
   strict_benchmark/
     FT_validation_direct_and_rag.csv    fine-tuned model, direct and RAG SQL, validation (with retrieved passages)
     FT_locked_test_direct_and_rag.csv   fine-tuned model, direct and RAG SQL, locked test
-    B1..B6_*.csv                        baselines (SQL and outcome per question)
+    B1..B6_*.csv, E1/E2_*.csv           baselines, and baselines with conventions stated (SQL and outcome per question)
     rescored_all_systems.csv            strict and tolerant score and failure type of every prediction
     all_systems_200.csv                 recorded strict outcomes of every system (one row per question)
   pd_test/                      frozen routing decisions, freeze manifest, freeze protocol, PD-Test outcomes
