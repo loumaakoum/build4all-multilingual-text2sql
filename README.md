@@ -110,8 +110,9 @@ This creates the `build4all_research` schema and loads 5,000 orders, 12,500 orde
 same connection URL in the notebooks. All 182 gold queries (150 benchmark intents and 32 PD-Test intents) execute
 on the restored database.
 
-The fine-tuned QLoRA adapter (175 MB) is not stored in this repository.
-<!-- NOTE (author): add the Hugging Face link of the adapter here once uploaded. -->
+The fine-tuned QLoRA adapter (175 MB) is on Hugging Face:
+[loumaakoum/qwen3-8b-build4all-text2sql-qlora](https://huggingface.co/loumaakoum/qwen3-8b-build4all-text2sql-qlora).
+Load it on top of `Qwen/Qwen3-8B` with `PeftModel.from_pretrained` (example in the model card).
 
 ## Integrity notes
 
