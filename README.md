@@ -11,7 +11,8 @@ The study evaluates QLoRA fine-tuning of Qwen3-8B, retrieval of business-policy 
 
 **Strict benchmark** (no SQL template family shared between training, validation, and locked test; 100 questions per
 held-out set). *Strict* is the original execution-accuracy metric. *Tolerant* also rounds numbers to two decimals and
-accepts an extra or missing column. The gold queries follow two conventions that no question states (rounding to two
+accepts results whose columns, in any order, are a subset of the other result's columns (same rows; checked for results
+with at most six columns). The gold queries follow two conventions that no question states (rounding to two
 decimals, and a product-name column in "top products" queries), and most strict differences come from them.
 With the conventions stated in the prompt, few-shot prompting beats the fine-tuned model on validation; its 24
 locked-test failures are all one SQL error (an ambiguous `product_id` in the top-products join). The robust gain of
@@ -81,8 +82,8 @@ permutation test, plus the cluster-adjusted McNemar statistics of Durkalski et a
 the form used by the R package `clust.bin.pair`. A family-level permutation test and the question-level McNemar test
 are printed for reference. Training-run values (loss, steps, runtime) come from the training log in notebook 1.
 
-To re-score every stored prediction from its SQL (this also checks that all 1,400 recorded strict outcomes
-reproduce), restore the database (below) and run:
+To re-score every stored prediction from its SQL (this also checks that all 1,800 recorded strict outcomes
+on the strict benchmark reproduce; PD-Test outcomes are not re-scored), restore the database (below) and run:
 
 ```bash
 pip install pandas psycopg2-binary

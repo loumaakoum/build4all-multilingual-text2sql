@@ -5,7 +5,9 @@ scores it two ways:
             multiset of rows (row order ignored), values normalised as in the notebooks.
   tolerant  additionally (a) rounds every numeric value to two decimals and
             (b) accepts a result whose columns are a projection of the other result
-            (an extra or missing column, e.g. the product name).
+            (the narrower result's columns, in any order, equal a subset of the
+            wider result's columns, with the same rows; only checked when the
+            wider result has at most six columns).
 
 Each strict failure is also classified:
   not_executed | rounding_only | column_only | rounding_and_column | other
