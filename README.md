@@ -117,7 +117,8 @@ Load it on top of `Qwen/Qwen3-8B` with `PeftModel.from_pretrained` (example in t
 ## Integrity notes
 
 - **Frozen before generation.** The PD-Test routing decisions were computed and saved before any PD-Test
-  generation (manifest timestamp 20:38:26 UTC on 6 Oct 2026; first generation file created 22 seconds later).
+  generation: in `notebooks/3_policy_test.ipynb`, the freezing cell ended at 20:38:26 UTC on 6 Oct 2026 (the
+  manifest timestamp), and the execution record of the first generation cell shows it started at 20:38:36 UTC.
   `results/pd_test/D1_freeze_manifest.json` records the SHA-256 of `D1_frozen_controller_routes.csv`
   (`09d92cdf…d8e0`) and of the router source code; both match the files here. The protocol and success criteria
   are in `results/pd_test/FREEZE_PROTOCOL.md`. It was recorded in this repository, not in an external registry.

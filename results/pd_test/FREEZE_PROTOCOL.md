@@ -3,8 +3,9 @@
 
 > This protocol was recorded in this repository, not in an external registry. Evidence of the order:
 > `D1_frozen_controller_routes.csv` and `D1_freeze_manifest.json` were written at 20:38:26 UTC on 6 Oct 2026
-> (timestamp inside the manifest); the first PD-Test generation file (`D2_pd_finetuned_direct.jsonl`) was
-> created at 20:38:48 UTC. Outcome: no router met both criteria below (v2b met criterion 2 only).
+> (timestamp inside the manifest; the freezing cell of `notebooks/3_policy_test.ipynb` ended at 20:38:26 UTC).
+> The execution record of the first generation cell (D2) in the same notebook shows it started at 20:38:36 UTC
+> (cell metadata `executionInfo`: end timestamp minus elapsed time). Outcome: no router met both criteria below (v2b met criterion 2 only).
 
 **Systems compared on the 128 PD-Test questions:** fine-tuned direct; fine-tuned + always-on RAG;
 controller v1 (frozen, tau = 0.93); controller v2a (retrieval-feature logistic regression, tau chosen by
