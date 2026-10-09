@@ -2,7 +2,7 @@
 
 Code, data, and per-question results for the paper
 
-> **When Retrieval Helps and When It Hurts: Fine-Tuning, Policy Retrieval, and Retrieval Routing for Multilingual Text-to-SQL with Lebanese Arabizi**
+> **When Retrieval Helps and When It Hurts: Fine-Tuning and Policy Retrieval for AI-Based Multilingual Business Text-to-SQL**
 > Louma Akoum — Faculty of Technology, Lebanese University
 
 The study evaluates QLoRA fine-tuning of Qwen3-8B, retrieval of business-policy documents (RAG), and three retrieval routers on Text-to-SQL questions in **English, French, Arabic, and Lebanese Arabizi**.
