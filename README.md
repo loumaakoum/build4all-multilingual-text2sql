@@ -2,7 +2,7 @@
 
 Code, data, and per-question results for the paper
 
-> **When Retrieval Helps and When It Hurts: Fine-Tuning and Policy Retrieval for AI-Based Multilingual Business Text-to-SQL**
+> **When Retrieval Helps and When It Hurts: Fine-Tuning, Policy Retrieval, and Routing for Multilingual Business Text-to-SQL**
 > Louma Akoum — Faculty of Technology, Lebanese University
 
 The study evaluates QLoRA fine-tuning of Qwen3-8B, retrieval of business-policy documents (RAG), and three retrieval routers on Text-to-SQL questions in **English, French, Arabic, and Lebanese Arabizi**.
@@ -11,8 +11,7 @@ The study evaluates QLoRA fine-tuning of Qwen3-8B, retrieval of business-policy 
 
 **Strict benchmark** (no SQL template family shared between training, validation, and locked test; 100 questions per
 held-out set). *Strict* is the original execution-accuracy metric. *Tolerant* also rounds numbers to two decimals and
-accepts results whose columns, in any order, are a subset of the other result's columns (same rows; checked for results
-with at most six columns). The gold queries follow two conventions that no question states (rounding to two
+accepts results whose columns, in any order, are a subset of the other result's columns (same rows). The gold queries follow two conventions that no question states (rounding to two
 decimals, and a product-name column in "top products" queries), and most strict differences come from them.
 With the conventions stated in the prompt, few-shot prompting beats the fine-tuned model on validation; its 24
 locked-test failures are all one SQL error (an ambiguous `product_id` in the top-products join). The robust gain of
@@ -24,7 +23,7 @@ fine-tuning is over zero-shot prompting, above all in Lebanese Arabizi (48/50 vs
 | Qwen3-8B few-shot (3 retrieved examples) | 85 | 94 | 76 | 100 |
 | Qwen3-8B zero-shot, conventions stated in prompt | 77 | 77 | 61 | 61 |
 | Qwen3-8B few-shot, conventions stated in prompt | 97 | 97 | 76 | 76 |
-| Qwen2.5-Coder-7B few-shot | 58 | 84 | 74 | 95 |
+| Qwen2.5-Coder-7B few-shot | 58 | 84 | 74 | 97 |
 | Qwen3-8B + QLoRA | 92 | 92 | 94 | 100 |
 | Qwen3-8B + QLoRA + RAG | 87 | 87 | 97 | 100 |
 

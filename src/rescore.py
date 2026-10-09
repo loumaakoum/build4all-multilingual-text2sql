@@ -6,8 +6,7 @@ scores it two ways:
   tolerant  additionally (a) rounds every numeric value to two decimals and
             (b) accepts a result whose columns are a projection of the other result
             (the narrower result's columns, in any order, equal a subset of the
-            wider result's columns, with the same rows; only checked when the
-            wider result has at most six columns).
+            wider result's columns, with the same rows).
 
 Each strict failure is also classified:
   not_executed | rounding_only | column_only | rounding_and_column | other
@@ -91,7 +90,7 @@ def projection_equal(a, b):
         return False
     wide, narrow = (a, b) if len(a[0]) > len(b[0]) else (b, a)
     k = len(narrow[0])
-    if k == len(wide[0]) or len(wide[0]) > 6:
+    if k == len(wide[0]):
         return False
     target = sort_rows(narrow)
     for cols in itertools.permutations(range(len(wide[0])), k):

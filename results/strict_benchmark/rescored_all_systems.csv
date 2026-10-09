@@ -3005,7 +3005,7 @@ JOIN
     product_event_counts pec ON p.product_id = pec.product_id
 ORDER BY 
     pec.event_count DESC
-LIMIT 5;",False,False,other
+LIMIT 5;",False,True,column_only
 coder_few,B4A-FT-095-LEBANESE_ARABIZI,final_test,B4A-FT-095,events_top_products_by_type,lebanese_arabizi,"WITH product_event_counts AS (
     SELECT 
         product_id, 
@@ -3215,7 +3215,7 @@ JOIN
     product_event_counts pec ON p.product_id = pec.product_id
 ORDER BY 
     pec.event_count DESC
-LIMIT 5;",False,False,other
+LIMIT 5;",False,True,column_only
 coder_few,B4A-FT-115-LEBANESE_ARABIZI,final_test,B4A-FT-115,events_top_products_by_type,lebanese_arabizi,"SELECT p.product_id, p.name, COUNT(pe.event_id) AS event_count
 FROM build4all_research.products p
 JOIN build4all_research.product_events pe ON p.product_id = pe.product_id
